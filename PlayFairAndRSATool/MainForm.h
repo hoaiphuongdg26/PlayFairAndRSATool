@@ -113,9 +113,10 @@ namespace MainForm {
 		RSAForm^ rsaForm = gcnew RSAForm(); // Create an instance of RSAForm
 		rsaForm->Show(); // Show RSAForm
 	}
+
 	private: System::Void btn_playFair_Click(System::Object^ sender, System::EventArgs^ e) {
-		//PlayFairForm^ playFairForm = gcnew PlayFairForm();
-		//playFairForm->Show();
+		PlayFairAndRSATool::PlayFairForm playFairForm;
+		playFairForm.ShowDialog();
 	}
 };
 }
