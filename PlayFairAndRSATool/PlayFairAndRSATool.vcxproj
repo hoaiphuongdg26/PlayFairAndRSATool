@@ -130,6 +130,8 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="PlayfairCipher.h" />
+    <ClInclude Include="Point.h" />
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -141,6 +143,7 @@
     <ClInclude Include="RSAForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Sanitizer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -151,7 +154,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="PlayFairForm.cpp" />
+    <ClCompile Include="PlayfairCipher.cpp" />
+    <ClCompile Include="Point.cpp" />
     <ClCompile Include="RSAForm.cpp" />
   </ItemGroup>
   <ItemGroup>

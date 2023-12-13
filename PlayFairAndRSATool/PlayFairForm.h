@@ -1,5 +1,4 @@
-#pragma once
-
+#include "PlayfairCipher.h"
 namespace PlayFairAndRSATool {
 
 	using namespace System;
@@ -64,7 +63,7 @@ namespace PlayFairAndRSATool {
 	private: System::Windows::Forms::TextBox^ tb_Separator1;
 	private: System::Windows::Forms::TextBox^ tb_Separator2;
 	private: System::Windows::Forms::TableLayoutPanel^ tableLayoutPanel1;
-	private: System::Windows::Forms::Button^ btn_00;
+	public: System::Windows::Forms::Button^ btn_00;
 	private: System::Windows::Forms::Button^ btn_01;
 	private: System::Windows::Forms::Button^ btn_02;
 	private: System::Windows::Forms::Button^ btn_03;
@@ -784,9 +783,10 @@ namespace PlayFairAndRSATool {
 			this->PerformLayout();
 
 		}
-#pragma endregion
-	private: System::Void PlayFairForm_Load(System::Object^ sender, System::EventArgs^ e) {
-	}
-	
+private: System::Void PlayFairForm_Load(System::Object^ sender, System::EventArgs^ e) {
+	PlayfairCipher^ playfairCipher = gcnew PlayfairCipher(5);
+	cliext::vector<cliext::vector<string>> temp = playfairCipher->getMatrix();
+}
 };
 }
+
