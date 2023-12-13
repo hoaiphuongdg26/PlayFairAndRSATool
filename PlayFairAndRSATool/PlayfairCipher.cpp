@@ -1,6 +1,5 @@
 #pragma
 #include "pch.h"
-#include "PlayFairForm.h"
 #include "PlayfairCipher.h"
 #include <iostream>
 #include "Sanitizer.h"
@@ -8,15 +7,34 @@ using namespace std;
 
 PlayfairCipher::PlayfairCipher(int size)
 {
-	playfairMatrix.resize(size);
-	for (int i = 0; i < size; ++i) {
-		playfairMatrix[i].resize(size);
+	playfairMatrix = (char**)malloc(sizeof(char*) * size);
+	char t = 'A';
+	for (int i = 0; i < size; i++) {
+		playfairMatrix[i] = (char*)malloc(sizeof(char) * size);
+		for (int j = 0; j < size; j++) {
+			if (t == 'J') t++;
+			playfairMatrix[i][j] = char(t);
+			t++;
+		}
 	}
+
 }
-void PlayfairCipher::createKeyMatrix(string& key)
+void PlayfairCipher::createKeyMatrix(string key)
 {
-	string alphabet = "abcdefghiklmnopqrstuvwxyz";
+	string alphabet = "ABCDEFGHIKLMNOPQRSTUVWXYZ";
 	string sanitizedKey = Sanitizer::sanitizeInputKey(key);
+	for (unsigned int i = 0; i < sanitizedKey.size(); i++) {
+		if (sanitizedKey[i] > 'Z' || sanitizedKey[i] < 'A') {
+			sanitizedKey.erase(i, 1); i--;
+		}
+	}
+	int chars[128] = { 0 };
+	for (unsigned int i = 0; i < sanitizedKey.size(); i++) {
+		if (sanitizedKey[i] == 'J') sanitizedKey[i] = 'I';
+		chars[sanitizedKey[i]]++;
+		if (chars[sanitizedKey[i]] > 1) { sanitizedKey.erase(i, 1); i--; }
+	}
+
 	for (unsigned int i = 0; i < sanitizedKey.size(); i++) {
 		for (int j = 0; j < alphabet.size(); j++) {
 			if (sanitizedKey[i] == alphabet[j]) {
@@ -28,7 +46,7 @@ void PlayfairCipher::createKeyMatrix(string& key)
 	int index = 0;
 	for (int row = 0; row < 5; row++) {
 		for (int column = 0; column < 5; column++) {
-			playfairMatrix.at(row).at(column) = sanitizedKey[index];
+			playfairMatrix[row][column] = sanitizedKey[index];
 			index++;
 		}
 	}
@@ -37,11 +55,11 @@ void PlayfairCipher::print()
 {
 	for (int row = 0; row < 5; row++) {
 		for (int column = 0; column < 5; column++) {
-			playfairMatrix.at(0).at(0);
+			playfairMatrix[row][column];
 		}
 		cout << endl;
 	}
 }
-cliext::vector<cliext::vector<string>> PlayfairCipher::getMatrix() {
+char** PlayfairCipher::getMatrix() {
 	return playfairMatrix;
 }

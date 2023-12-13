@@ -21,6 +21,8 @@ Class MainForm.RSAForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
 Class PlayFairAndRSATool.PlayFairForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.Button btn_00 : Public
 Class MainForm.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
