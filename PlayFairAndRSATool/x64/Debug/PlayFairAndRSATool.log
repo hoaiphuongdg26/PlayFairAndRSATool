@@ -1,3 +1,943 @@
 ﻿  MainForm.cpp
-  AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  PlayFairAndRSATool.vcxproj -> D:\AnToanMang\DoAn\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.exe
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(15,27): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(15,27): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(15,27): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(15,27): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(15,27): error C3225:         ]
+  (compiling source file '/MainForm.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(15,27):
+  the template instantiation context (the oldest one first) is
+  	D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\PlayfairCipher.h(16,44):
+  	see reference to class template instantiation 'cliext::vector<cliext::vector<std::string>>' being compiled
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(1314,17):
+  	see reference to class template instantiation 'cliext::impl::vector_select<_Value_t,true>' being compiled
+          with
+          [
+              _Value_t=cliext::vector<std::string>
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(1234,22):
+  	see reference to class template instantiation 'cliext::vector<std::string>' being compiled
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(1314,17):
+  	see reference to class template instantiation 'cliext::impl::vector_select<_Value_t,false>' being compiled
+          with
+          [
+              _Value_t=std::string
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(1091,11):
+  	see reference to class template instantiation 'cliext::impl::vector_base<_Value_t,false>' being compiled
+          with
+          [
+              _Value_t=std::string
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(834,11):
+  	see reference to class template instantiation 'cliext::impl::vector_impl<_Value_t,false>' being compiled
+          with
+          [
+              _Value_t=std::string
+          ]
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(15,19): error C2955: 'Microsoft::VisualC::StlClr::IVector': use of class generic requires generic argument list
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(20,26): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(20,26): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(20,26): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(20,26): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(20,26): error C3225:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(20,18): error C2955: 'Microsoft::VisualC::StlClr::IVector': use of class generic requires generic argument list
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(21,31): error C2691: '_Value_t': a managed array cannot have this element type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(21,31): error C2691:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(21,31): error C2691:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(21,31): error C2691:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(21,31): error C2691:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(22,52): error C3225: generic type argument for 'T' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(22,52): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(22,52): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(22,52): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(22,52): error C3225:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(22,40): error C2955: 'System::Collections::Generic::IEnumerable': use of class generic requires generic argument list
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(42,57): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(42,57): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(42,57): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(42,57): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(42,57): error C3225:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(42,27): error C2955: 'Microsoft::VisualC::StlClr::Generic::ContainerRandomAccessIterator': use of class generic requires generic argument list
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(44,55): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(44,55): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(44,55): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(44,55): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(44,55): error C3225:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(44,27): error C2955: 'Microsoft::VisualC::StlClr::Generic::ReverseRandomAccessIterator': use of class generic requires generic argument list
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(323,46): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(323,46): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(323,46): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(323,46): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(323,46): error C3225:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(323,31): error C2955: 'Microsoft::VisualC::StlClr::Generic::IInputIterator': use of class generic requires generic argument list
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(324,35): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(324,35): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(324,35): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(324,35): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(324,35): error C3225:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(324,20): error C2955: 'Microsoft::VisualC::StlClr::Generic::IInputIterator': use of class generic requires generic argument list
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(368,35): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(368,35): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(368,35): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(368,35): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(368,35): error C3225:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(368,20): error C2955: 'Microsoft::VisualC::StlClr::Generic::IInputIterator': use of class generic requires generic argument list
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(369,35): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(369,35): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(369,35): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(369,35): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(369,35): error C3225:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(369,20): error C2955: 'Microsoft::VisualC::StlClr::Generic::IInputIterator': use of class generic requires generic argument list
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(597,21): error C3651: 'System::Collections::ICollection::Count::get': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(597,21): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::Count::get': function does not override 'System::Collections::ICollection::Count::get'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(597,21): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(597,21): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(597,21): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(597,21): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(606,16): error C3651: 'System::Collections::ICollection::IsSynchronized::get': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(606,16): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::IsSynchronized::get': function does not override 'System::Collections::ICollection::IsSynchronized::get'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(606,16): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(606,16): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(606,16): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(606,16): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(615,27): error C3651: 'System::Collections::ICollection::SyncRoot::get': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(615,27): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::SyncRoot::get': function does not override 'System::Collections::ICollection::SyncRoot::get'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(615,27): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(615,27): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(615,27): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(615,27): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(622,15): error C3651: 'System::Collections::ICollection::CopyTo': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(622,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::CopyTo': function does not override 'System::Collections::ICollection::CopyTo'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(622,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(622,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(622,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(622,15): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(633,44): error C3651: 'System::Collections::IEnumerable::GetEnumerator': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(633,44): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::GetEnumerator': function does not override 'System::Collections::IEnumerable::GetEnumerator'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(633,44): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(633,44): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(633,44): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(633,44): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(639,24): error C3651: 'Microsoft::VisualC::StlClr::IVector::get_generation': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(639,24): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::get_generation_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::get_generation'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(639,24): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(639,24): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(639,24): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(639,24): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(645,15): error C3651: 'Microsoft::VisualC::StlClr::Generic::IRandomAccessContainer<TValue>::valid_bias': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(645,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::valid_bias_virtual': function does not override 'Microsoft::VisualC::StlClr::Generic::IRandomAccessContainer<TValue>::valid_bias'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(645,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(645,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(645,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(645,15): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(651,20): error C3651: 'Microsoft::VisualC::StlClr::IVector::at': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(651,20): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::at_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::at'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(651,20): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(651,20): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(651,20): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(651,20): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(657,20): error C3651: 'Microsoft::VisualC::StlClr::Generic::IRandomAccessContainer<TValue>::at_bias': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(657,20): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::at_bias_virtual': function does not override 'Microsoft::VisualC::StlClr::Generic::IRandomAccessContainer<TValue>::at_bias'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(657,20): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(657,20): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(657,20): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(657,20): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(663,20): error C3651: 'Microsoft::VisualC::StlClr::IVector::front': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(663,20): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::front_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::front'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(663,20): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(663,20): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(663,20): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(663,20): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(669,20): error C3651: 'Microsoft::VisualC::StlClr::IVector::back': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(669,20): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::back_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::back'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(669,20): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(669,20): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(669,20): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(669,20): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(676,27): error C3651: 'Microsoft::VisualC::StlClr::IVector::begin': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(676,27): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::begin_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::begin'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(676,27): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(676,27): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(676,27): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(676,27): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(681,27): error C3651: 'Microsoft::VisualC::StlClr::IVector::end': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(681,27): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::end_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::end'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(681,27): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(681,27): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(681,27): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(681,27): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(687,35): error C3651: 'Microsoft::VisualC::StlClr::IVector::rbegin': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(687,35): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::rbegin_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::rbegin'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(687,35): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(687,35): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(687,35): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(687,35): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(693,35): error C3651: 'Microsoft::VisualC::StlClr::IVector::rend': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(693,35): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::rend_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::rend'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(693,35): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(693,35): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(693,35): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(693,35): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(700,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::reserve': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(700,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::reserve_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::reserve'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(700,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(700,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(700,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(700,15): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(706,20): error C3651: 'Microsoft::VisualC::StlClr::IVector::capacity': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(706,20): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::capacity_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::capacity'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(706,20): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(706,20): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(706,20): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(706,20): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(712,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::resize': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(712,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::resize_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::resize'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(712,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(712,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(712,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(712,15): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(718,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::resize': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(718,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::resize_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::resize'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(718,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(718,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(718,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(718,15): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(724,20): error C3651: 'Microsoft::VisualC::StlClr::IVector::size': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(724,20): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::size_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::size'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(724,20): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(724,20): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(724,20): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(724,20): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(730,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::empty': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(730,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::empty_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::empty'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(730,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(730,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(730,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(730,15): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(740,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::push_back': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(740,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::push_back_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::push_back'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(740,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(740,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(740,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(740,15): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(746,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::pop_back': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(746,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::pop_back_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::pop_back'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(746,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(746,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(746,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(746,15): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(752,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::assign': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(752,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::assign_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::assign'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(752,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(752,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(752,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(752,15): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(759,35): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(759,35): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(759,35): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(759,35): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(759,35): error C3225:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(759,20): error C2955: 'Microsoft::VisualC::StlClr::Generic::IInputIterator': use of class generic requires generic argument list
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(760,35): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(760,35): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(760,35): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(760,35): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(760,35): error C3225:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(760,20): error C2955: 'Microsoft::VisualC::StlClr::Generic::IInputIterator': use of class generic requires generic argument list
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(758,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::assign': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(758,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::assign_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::assign'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(758,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(758,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(758,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(758,15): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(766,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::assign': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(766,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::assign_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::assign'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(766,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(766,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(766,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(766,15): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(773,27): error C3651: 'Microsoft::VisualC::StlClr::IVector::insert': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(773,27): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::insert_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::insert'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(773,27): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(773,27): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(773,27): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(773,27): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(780,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::insert': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(780,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::insert_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::insert'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(780,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(780,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(780,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(780,15): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(788,35): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(788,35): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(788,35): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(788,35): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(788,35): error C3225:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(788,20): error C2955: 'Microsoft::VisualC::StlClr::Generic::IInputIterator': use of class generic requires generic argument list
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(789,35): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(789,35): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(789,35): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(789,35): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(789,35): error C3225:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(789,20): error C2955: 'Microsoft::VisualC::StlClr::Generic::IInputIterator': use of class generic requires generic argument list
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(787,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::insert': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(787,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::insert_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::insert'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(787,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(787,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(787,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(787,15): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(795,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::insert': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(795,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::insert_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::insert'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(795,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(795,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(795,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(795,15): error C3671:         ]
+  (compiling source file '/MainForm.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(795,15): error C1003: error count exceeds 100; stopping compilation
+  (compiling source file '/MainForm.cpp')
+  
+  PlayfairCipher.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(15,27): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(15,27): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(15,27): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(15,27): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(15,27): error C3225:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(15,27):
+  the template instantiation context (the oldest one first) is
+  	D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\PlayfairCipher.h(16,44):
+  	see reference to class template instantiation 'cliext::vector<cliext::vector<std::string>>' being compiled
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(1314,17):
+  	see reference to class template instantiation 'cliext::impl::vector_select<_Value_t,true>' being compiled
+          with
+          [
+              _Value_t=cliext::vector<std::string>
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(1234,22):
+  	see reference to class template instantiation 'cliext::vector<std::string>' being compiled
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(1314,17):
+  	see reference to class template instantiation 'cliext::impl::vector_select<_Value_t,false>' being compiled
+          with
+          [
+              _Value_t=std::string
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(1091,11):
+  	see reference to class template instantiation 'cliext::impl::vector_base<_Value_t,false>' being compiled
+          with
+          [
+              _Value_t=std::string
+          ]
+  	C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(834,11):
+  	see reference to class template instantiation 'cliext::impl::vector_impl<_Value_t,false>' being compiled
+          with
+          [
+              _Value_t=std::string
+          ]
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(15,19): error C2955: 'Microsoft::VisualC::StlClr::IVector': use of class generic requires generic argument list
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(20,26): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(20,26): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(20,26): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(20,26): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(20,26): error C3225:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(20,18): error C2955: 'Microsoft::VisualC::StlClr::IVector': use of class generic requires generic argument list
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(21,31): error C2691: '_Value_t': a managed array cannot have this element type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(21,31): error C2691:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(21,31): error C2691:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(21,31): error C2691:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(21,31): error C2691:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(22,52): error C3225: generic type argument for 'T' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(22,52): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(22,52): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(22,52): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(22,52): error C3225:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(22,40): error C2955: 'System::Collections::Generic::IEnumerable': use of class generic requires generic argument list
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(42,57): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(42,57): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(42,57): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(42,57): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(42,57): error C3225:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(42,27): error C2955: 'Microsoft::VisualC::StlClr::Generic::ContainerRandomAccessIterator': use of class generic requires generic argument list
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(44,55): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(44,55): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(44,55): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(44,55): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(44,55): error C3225:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(44,27): error C2955: 'Microsoft::VisualC::StlClr::Generic::ReverseRandomAccessIterator': use of class generic requires generic argument list
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(323,46): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(323,46): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(323,46): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(323,46): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(323,46): error C3225:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(323,31): error C2955: 'Microsoft::VisualC::StlClr::Generic::IInputIterator': use of class generic requires generic argument list
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(324,35): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(324,35): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(324,35): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(324,35): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(324,35): error C3225:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(324,20): error C2955: 'Microsoft::VisualC::StlClr::Generic::IInputIterator': use of class generic requires generic argument list
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(368,35): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(368,35): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(368,35): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(368,35): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(368,35): error C3225:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(368,20): error C2955: 'Microsoft::VisualC::StlClr::Generic::IInputIterator': use of class generic requires generic argument list
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(369,35): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(369,35): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(369,35): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(369,35): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(369,35): error C3225:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(369,20): error C2955: 'Microsoft::VisualC::StlClr::Generic::IInputIterator': use of class generic requires generic argument list
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(597,21): error C3651: 'System::Collections::ICollection::Count::get': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(597,21): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::Count::get': function does not override 'System::Collections::ICollection::Count::get'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(597,21): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(597,21): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(597,21): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(597,21): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(606,16): error C3651: 'System::Collections::ICollection::IsSynchronized::get': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(606,16): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::IsSynchronized::get': function does not override 'System::Collections::ICollection::IsSynchronized::get'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(606,16): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(606,16): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(606,16): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(606,16): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(615,27): error C3651: 'System::Collections::ICollection::SyncRoot::get': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(615,27): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::SyncRoot::get': function does not override 'System::Collections::ICollection::SyncRoot::get'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(615,27): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(615,27): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(615,27): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(615,27): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(622,15): error C3651: 'System::Collections::ICollection::CopyTo': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(622,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::CopyTo': function does not override 'System::Collections::ICollection::CopyTo'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(622,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(622,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(622,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(622,15): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(633,44): error C3651: 'System::Collections::IEnumerable::GetEnumerator': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(633,44): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::GetEnumerator': function does not override 'System::Collections::IEnumerable::GetEnumerator'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(633,44): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(633,44): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(633,44): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(633,44): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(639,24): error C3651: 'Microsoft::VisualC::StlClr::IVector::get_generation': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(639,24): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::get_generation_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::get_generation'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(639,24): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(639,24): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(639,24): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(639,24): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(645,15): error C3651: 'Microsoft::VisualC::StlClr::Generic::IRandomAccessContainer<TValue>::valid_bias': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(645,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::valid_bias_virtual': function does not override 'Microsoft::VisualC::StlClr::Generic::IRandomAccessContainer<TValue>::valid_bias'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(645,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(645,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(645,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(645,15): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(651,20): error C3651: 'Microsoft::VisualC::StlClr::IVector::at': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(651,20): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::at_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::at'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(651,20): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(651,20): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(651,20): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(651,20): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(657,20): error C3651: 'Microsoft::VisualC::StlClr::Generic::IRandomAccessContainer<TValue>::at_bias': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(657,20): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::at_bias_virtual': function does not override 'Microsoft::VisualC::StlClr::Generic::IRandomAccessContainer<TValue>::at_bias'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(657,20): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(657,20): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(657,20): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(657,20): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(663,20): error C3651: 'Microsoft::VisualC::StlClr::IVector::front': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(663,20): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::front_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::front'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(663,20): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(663,20): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(663,20): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(663,20): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(669,20): error C3651: 'Microsoft::VisualC::StlClr::IVector::back': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(669,20): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::back_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::back'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(669,20): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(669,20): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(669,20): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(669,20): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(676,27): error C3651: 'Microsoft::VisualC::StlClr::IVector::begin': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(676,27): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::begin_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::begin'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(676,27): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(676,27): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(676,27): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(676,27): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(681,27): error C3651: 'Microsoft::VisualC::StlClr::IVector::end': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(681,27): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::end_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::end'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(681,27): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(681,27): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(681,27): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(681,27): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(687,35): error C3651: 'Microsoft::VisualC::StlClr::IVector::rbegin': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(687,35): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::rbegin_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::rbegin'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(687,35): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(687,35): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(687,35): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(687,35): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(693,35): error C3651: 'Microsoft::VisualC::StlClr::IVector::rend': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(693,35): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::rend_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::rend'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(693,35): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(693,35): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(693,35): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(693,35): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(700,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::reserve': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(700,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::reserve_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::reserve'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(700,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(700,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(700,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(700,15): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(706,20): error C3651: 'Microsoft::VisualC::StlClr::IVector::capacity': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(706,20): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::capacity_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::capacity'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(706,20): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(706,20): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(706,20): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(706,20): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(712,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::resize': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(712,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::resize_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::resize'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(712,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(712,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(712,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(712,15): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(718,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::resize': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(718,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::resize_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::resize'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(718,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(718,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(718,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(718,15): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(724,20): error C3651: 'Microsoft::VisualC::StlClr::IVector::size': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(724,20): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::size_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::size'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(724,20): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(724,20): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(724,20): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(724,20): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(730,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::empty': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(730,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::empty_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::empty'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(730,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(730,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(730,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(730,15): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(740,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::push_back': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(740,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::push_back_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::push_back'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(740,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(740,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(740,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(740,15): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(746,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::pop_back': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(746,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::pop_back_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::pop_back'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(746,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(746,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(746,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(746,15): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(752,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::assign': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(752,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::assign_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::assign'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(752,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(752,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(752,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(752,15): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(759,35): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(759,35): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(759,35): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(759,35): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(759,35): error C3225:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(759,20): error C2955: 'Microsoft::VisualC::StlClr::Generic::IInputIterator': use of class generic requires generic argument list
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(760,35): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(760,35): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(760,35): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(760,35): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(760,35): error C3225:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(760,20): error C2955: 'Microsoft::VisualC::StlClr::Generic::IInputIterator': use of class generic requires generic argument list
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(758,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::assign': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(758,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::assign_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::assign'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(758,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(758,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(758,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(758,15): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(766,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::assign': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(766,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::assign_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::assign'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(766,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(766,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(766,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(766,15): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(773,27): error C3651: 'Microsoft::VisualC::StlClr::IVector::insert': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(773,27): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::insert_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::insert'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(773,27): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(773,27): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(773,27): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(773,27): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(780,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::insert': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(780,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::insert_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::insert'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(780,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(780,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(780,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(780,15): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(788,35): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(788,35): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(788,35): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(788,35): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(788,35): error C3225:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(788,20): error C2955: 'Microsoft::VisualC::StlClr::Generic::IInputIterator': use of class generic requires generic argument list
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(789,35): error C3225: generic type argument for 'TValue' cannot be '_Value_t', it must be a value type or a handle to a reference type
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(789,35): error C3225:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(789,35): error C3225:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(789,35): error C3225:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(789,35): error C3225:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(789,20): error C2955: 'Microsoft::VisualC::StlClr::Generic::IInputIterator': use of class generic requires generic argument list
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(787,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::insert': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(787,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::insert_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::insert'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(787,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(787,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(787,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(787,15): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(795,15): error C3651: 'Microsoft::VisualC::StlClr::IVector::insert': cannot be used as an explicit override, must be a member of a base class
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(795,15): error C3671: 'cliext::impl::vector_impl<_Value_t,false>::insert_virtual': function does not override 'Microsoft::VisualC::StlClr::IVector::insert'
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(795,15): error C3671:         with
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(795,15): error C3671:         [
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(795,15): error C3671:             _Value_t=std::string
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(795,15): error C3671:         ]
+  (compiling source file '/PlayfairCipher.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\cliext\vector(795,15): error C1003: error count exceeds 100; stopping compilation
+  (compiling source file '/PlayfairCipher.cpp')
+  
+  Generating Code...
