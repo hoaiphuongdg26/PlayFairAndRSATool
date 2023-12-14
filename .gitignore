@@ -1,1 +1,4 @@
 *.tlog
+*.suo
+*.bd
+*.vsidx
