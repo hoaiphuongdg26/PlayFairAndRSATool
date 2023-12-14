@@ -1,28 +1,35 @@
 ﻿  MainForm.cpp
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(845,17): warning C4477: 'sprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'System::String ^'
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(896,17): warning C4477: 'sprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'System::String ^'
   (compiling source file '/MainForm.cpp')
   
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(845,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(896,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   (compiling source file '/MainForm.cpp')
   
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(895,94): warning C4244: 'argument': conversion from 'wchar_t' to 'char', possible loss of data
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(953,94): warning C4244: 'argument': conversion from 'wchar_t' to 'char', possible loss of data
   (compiling source file '/MainForm.cpp')
   
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(895,70): warning C4244: 'argument': conversion from 'wchar_t' to 'char', possible loss of data
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(953,70): warning C4244: 'argument': conversion from 'wchar_t' to 'char', possible loss of data
   (compiling source file '/MainForm.cpp')
   
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(916,18): warning C4244: 'argument': conversion from 'wchar_t' to '_Elem', possible loss of data
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(916,18): warning C4244:         with
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(916,18): warning C4244:         [
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(916,18): warning C4244:             _Elem=char
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(916,18): warning C4244:         ]
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(972,19): warning C4244: 'argument': conversion from 'wchar_t' to '_Elem', possible loss of data
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(972,19): warning C4244:         with
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(972,19): warning C4244:         [
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(972,19): warning C4244:             _Elem=char
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(972,19): warning C4244:         ]
   (compiling source file '/MainForm.cpp')
   
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(945,95): warning C4244: 'argument': conversion from 'wchar_t' to 'char', possible loss of data
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(980,19): warning C4244: 'argument': conversion from 'wchar_t' to '_Elem', possible loss of data
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(980,19): warning C4244:         with
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(980,19): warning C4244:         [
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(980,19): warning C4244:             _Elem=char
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(980,19): warning C4244:         ]
   (compiling source file '/MainForm.cpp')
   
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(945,71): warning C4244: 'argument': conversion from 'wchar_t' to 'char', possible loss of data
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(1015,95): warning C4244: 'argument': conversion from 'wchar_t' to 'char', possible loss of data
+  (compiling source file '/MainForm.cpp')
+  
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(1015,71): warning C4244: 'argument': conversion from 'wchar_t' to 'char', possible loss of data
   (compiling source file '/MainForm.cpp')
   
   AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
-  PlayFairAndRSATool.vcxproj -> D:\AnToanMang\DoAn\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.exe
+  PlayFairAndRSATool.vcxproj -> D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.exe

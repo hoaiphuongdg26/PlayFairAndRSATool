@@ -808,41 +808,98 @@ private: System::Void PlayFairForm_Load(System::Object^ sender, System::EventArg
 	DisplayMatrix5();
 }
 void DisplayMatrix5() {
-		   char** temp = playfairCipher->getMatrix();
+		   char** temp = new char*;
+		   temp = playfairCipher->getMatrix();
 		   btn_00->Text = String(static_cast<char>(temp[0][0]), 1).ToString();
 		   btn_01->Text = String(static_cast<char>(temp[0][1]), 1).ToString();
 		   btn_02->Text = String(static_cast<char>(temp[0][2]), 1).ToString();
 		   btn_03->Text = String(static_cast<char>(temp[0][3]), 1).ToString();
 		   btn_04->Text = String(static_cast<char>(temp[0][4]), 1).ToString();
+		   btn_05->Text = "";
 		   btn_10->Text = String(static_cast<char>(temp[1][0]), 1).ToString();
 		   btn_11->Text = String(static_cast<char>(temp[1][1]), 1).ToString();
 		   btn_12->Text = String(static_cast<char>(temp[1][2]), 1).ToString();
 		   btn_13->Text = String(static_cast<char>(temp[1][3]), 1).ToString();
 		   btn_14->Text = String(static_cast<char>(temp[1][4]), 1).ToString();
+		   btn_15->Text = "";
 		   btn_20->Text = String(static_cast<char>(temp[2][0]), 1).ToString();
 		   btn_21->Text = String(static_cast<char>(temp[2][1]), 1).ToString();
 		   btn_22->Text = String(static_cast<char>(temp[2][2]), 1).ToString();
 		   btn_23->Text = String(static_cast<char>(temp[2][3]), 1).ToString();
 		   btn_24->Text = String(static_cast<char>(temp[2][4]), 1).ToString();
+		   btn_25->Text = "";
 		   btn_30->Text = String(static_cast<char>(temp[3][0]), 1).ToString();
 		   btn_31->Text = String(static_cast<char>(temp[3][1]), 1).ToString();
 		   btn_32->Text = String(static_cast<char>(temp[3][2]), 1).ToString();
 		   btn_33->Text = String(static_cast<char>(temp[3][3]), 1).ToString();
 		   btn_34->Text = String(static_cast<char>(temp[3][4]), 1).ToString();
+		   btn_35->Text = "";
 		   btn_40->Text = String(static_cast<char>(temp[4][0]), 1).ToString();
 		   btn_41->Text = String(static_cast<char>(temp[4][1]), 1).ToString();
 		   btn_42->Text = String(static_cast<char>(temp[4][2]), 1).ToString();
 		   btn_43->Text = String(static_cast<char>(temp[4][3]), 1).ToString();
 		   btn_44->Text = String(static_cast<char>(temp[4][4]), 1).ToString();
+		   btn_45->Text = "";
+		   btn_50->Text = "";
+		   btn_51->Text = "";
+		   btn_52->Text = "";
+		   btn_53->Text = "";
+		   btn_54->Text = "";
+		   btn_55->Text = "";
 	   }
+void DisplayMatrix6() {
+	char** temp = new char*;
+	temp = playfairCipher->getMatrix();
+	btn_00->Text = String(static_cast<char>(temp[0][0]), 1).ToString();
+	btn_01->Text = String(static_cast<char>(temp[0][1]), 1).ToString();
+	btn_02->Text = String(static_cast<char>(temp[0][2]), 1).ToString();
+	btn_03->Text = String(static_cast<char>(temp[0][3]), 1).ToString();
+	btn_04->Text = String(static_cast<char>(temp[0][4]), 1).ToString();
+	btn_05->Text = String(static_cast<char>(temp[0][5]), 1).ToString();
+	btn_10->Text = String(static_cast<char>(temp[1][0]), 1).ToString();
+	btn_11->Text = String(static_cast<char>(temp[1][1]), 1).ToString();
+	btn_12->Text = String(static_cast<char>(temp[1][2]), 1).ToString();
+	btn_13->Text = String(static_cast<char>(temp[1][3]), 1).ToString();
+	btn_14->Text = String(static_cast<char>(temp[1][4]), 1).ToString();
+	btn_15->Text = String(static_cast<char>(temp[1][5]), 1).ToString();
+	btn_20->Text = String(static_cast<char>(temp[2][0]), 1).ToString();
+	btn_21->Text = String(static_cast<char>(temp[2][1]), 1).ToString();
+	btn_22->Text = String(static_cast<char>(temp[2][2]), 1).ToString();
+	btn_23->Text = String(static_cast<char>(temp[2][3]), 1).ToString();
+	btn_24->Text = String(static_cast<char>(temp[2][4]), 1).ToString();
+	btn_25->Text = String(static_cast<char>(temp[2][5]), 1).ToString();
+	btn_30->Text = String(static_cast<char>(temp[3][0]), 1).ToString();
+	btn_31->Text = String(static_cast<char>(temp[3][1]), 1).ToString();
+	btn_32->Text = String(static_cast<char>(temp[3][2]), 1).ToString();
+	btn_33->Text = String(static_cast<char>(temp[3][3]), 1).ToString();
+	btn_34->Text = String(static_cast<char>(temp[3][4]), 1).ToString();
+	btn_35->Text = String(static_cast<char>(temp[3][5]), 1).ToString();
+	btn_40->Text = String(static_cast<char>(temp[4][0]), 1).ToString();
+	btn_41->Text = String(static_cast<char>(temp[4][1]), 1).ToString();
+	btn_42->Text = String(static_cast<char>(temp[4][2]), 1).ToString();
+	btn_43->Text = String(static_cast<char>(temp[4][3]), 1).ToString();
+	btn_44->Text = String(static_cast<char>(temp[4][4]), 1).ToString();
+	btn_45->Text = String(static_cast<char>(temp[4][5]), 1).ToString();
+	btn_50->Text = String(static_cast<char>(temp[5][0]), 1).ToString();
+	btn_51->Text = String(static_cast<char>(temp[5][1]), 1).ToString();
+	btn_52->Text = String(static_cast<char>(temp[5][2]), 1).ToString();
+	btn_53->Text = String(static_cast<char>(temp[5][3]), 1).ToString();
+	btn_54->Text = String(static_cast<char>(temp[5][4]), 1).ToString();
+	btn_55->Text = String(static_cast<char>(temp[5][5]), 1).ToString();
+}
 private: System::Void tb_Key_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	String^ temp = this->tb_Key->Text;
+	
+	//chuyen tu dang system ve chuan binh thuong (std::string)
 	char cStr[50] = { 0 };
 	if (temp->Length < sizeof(cStr))
 		sprintf(cStr, "%s", temp);
 	std::string stlString(cStr);
+
 	playfairCipher->createKeyMatrix(stlString);
-	DisplayMatrix5();
+
+	if (matrixSize == 5) DisplayMatrix5();
+	else DisplayMatrix6();
 }
 private: System::Void btn_ClrKey_Click(System::Object^ sender, System::EventArgs^ e) {
 	tb_Key->Clear();
@@ -851,6 +908,8 @@ private: System::Void cb_5x5_CheckedChanged(System::Object^ sender, System::Even
 	if (cb_5x5->Checked) {
 		cb_6x6->Checked = false;
 		matrixSize = 5;
+		PlayfairCipher^ temp = gcnew PlayfairCipher(matrixSize);
+		playfairCipher = temp;
 		DisplayMatrix5();
 	}
 	else {
@@ -862,7 +921,9 @@ private: System::Void cb_6x6_CheckedChanged(System::Object^ sender, System::Even
 	if (cb_6x6->Checked) {
 		cb_5x5->Checked = false;
 		matrixSize = 6;
-		//DisplayMatrix6();
+		PlayfairCipher^ temp = gcnew PlayfairCipher(matrixSize);
+		playfairCipher = temp;
+		DisplayMatrix6();
 	}
 	else {
 		cb_5x5->Checked = true;
@@ -904,11 +965,20 @@ private: System::Void btn_Encrypt_Click(System::Object^ sender, System::EventArg
 		string temp = "", result = "";
 		sep1 = toupper(sep1);
 		sep2 = toupper(sep2);
-		//Loai bo ki tu khong hop le
-		
-		for (int i = 0; i < str->Length; i++) {
-			if (str[i] <= 'Z' && str[i] >= 'A') {
-				temp += str[i];
+		if (matrixSize == 5) {
+			//Loai bo ki tu khong hop le
+			for (int i = 0; i < str->Length; i++) {
+				if (str[i] <= 'Z' && str[i] >= 'A') {
+					temp += str[i];
+				}
+			}
+		}
+		else {
+			//Loai bo ki tu khong hop le
+			for (int i = 0; i < str->Length; i++) {
+				if ((str[i] <= 'Z' && str[i] >= 'A') || (str[i] <= '9' && str[i] >= '0')) {
+					temp += str[i];
+				}
 			}
 		}
 		for (int i = 0; i < temp.length(); i++) {
@@ -930,6 +1000,11 @@ private: System::Void btn_ClrInput_Click(System::Object^ sender, System::EventAr
 	tb_Input->Clear();
 }
 private: System::Void btn_Decrypt_Click(System::Object^ sender, System::EventArgs^ e) {
+	//kiem tra input
+	if (String::IsNullOrEmpty(tb_Input->Text)) {
+		MessageBox::Show("Please enter an input");
+		return;
+	}
 	//kiem tra separator 1 & 2
 	if (String::IsNullOrEmpty(tb_Separator1->Text) || String::IsNullOrEmpty(tb_Separator2->Text)
 		|| tb_Separator1->Text->ToUpper() == tb_Separator2->Text->ToUpper()) {
@@ -940,10 +1015,10 @@ private: System::Void btn_Decrypt_Click(System::Object^ sender, System::EventArg
 	string formattedInput = formattingInput(tb_Input->Text, tb_Separator1->Text[0], tb_Separator2->Text[0]);
 	//giai ma
 	string decryptedText = playfairCipher->Decrypt(formattedInput);
-	tb_Encrypted->Text = DisplayFormattedText(decryptedText);
-	//hien thi formatted input
-	tb_Formatted->Text = DisplayFormattedText(formattedInput);
-	
+	tb_Formatted->Text = DisplayFormattedText(decryptedText);
+	tb_Encrypted->Text = DisplayFormattedText(formattedInput);
+	//hien thi
+	tb_Output->Text = String(decryptedText.c_str()).ToString();
 }
 };
 }
