@@ -910,7 +910,7 @@ private: System::Void cb_5x5_CheckedChanged(System::Object^ sender, System::Even
 		matrixSize = 5;
 		PlayfairCipher^ temp = gcnew PlayfairCipher(matrixSize);
 		playfairCipher = temp;
-		DisplayMatrix5();
+		tb_Key_TextChanged(sender, e);
 	}
 	else {
 		cb_6x6->Checked = true;
@@ -923,7 +923,7 @@ private: System::Void cb_6x6_CheckedChanged(System::Object^ sender, System::Even
 		matrixSize = 6;
 		PlayfairCipher^ temp = gcnew PlayfairCipher(matrixSize);
 		playfairCipher = temp;
-		DisplayMatrix6();
+		tb_Key_TextChanged(sender, e);
 	}
 	else {
 		cb_5x5->Checked = true;
@@ -984,7 +984,7 @@ private: System::Void btn_Encrypt_Click(System::Object^ sender, System::EventArg
 		for (int i = 0; i < temp.length(); i++) {
 			result += temp[i];
 			//Tach cac ki tu trung nhau : aa -> ax ax; xx -> xy xy
-			if (i + 1 < temp.length() && temp[i + 1] == temp[i]) {
+			if (i + 1 < temp.length() && temp[i + 1] == temp[i] && result.length() % 2) {
 				if (temp[i] != sep1) result += sep1;
 				else result += sep2;
 			}

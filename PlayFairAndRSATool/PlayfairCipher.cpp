@@ -120,12 +120,12 @@ char PlayfairCipher::getLetterOfPoint(Point* a)
 }
 string PlayfairCipher::Encrypt(string input)
 {
-	Point* a = new Point(0, 0);
-	Point* b = new Point(0, 0);
-	for (unsigned int i = 0; i < input.size() - 1; i += 2) {
+	Point* a = new Point();
+	Point* b = new Point();
+	for (unsigned int i = 0; i < input.length() - 1; i += 2) {
 		a = getPointOfLetter(input[i]);
 		b = getPointOfLetter(input[i + 1]);
-
+		if (a == NULL || b == NULL) continue;
 		encryptCoordinates(a, b);
 
 		input[i] = getLetterOfPoint(a);
@@ -133,7 +133,7 @@ string PlayfairCipher::Encrypt(string input)
 	}
 	return input;
 }
-void PlayfairCipher::encryptCoordinates(Point* a, Point* b) {
+void PlayfairCipher::encryptCoordinates(Point *a, Point* b) {
 	if (a->column == b->column) {
 		a->row = (a->row + 1) % matrixSize;
 		b->row = (b->row + 1) % matrixSize;
@@ -150,12 +150,12 @@ void PlayfairCipher::encryptCoordinates(Point* a, Point* b) {
 }
 string PlayfairCipher::Decrypt(string cipherText)
 {
-	Point* a = new Point(0, 0);
-	Point* b = new Point(0, 0);
-	for (unsigned int i = 0; i < cipherText.size() - 1; i += 2) {
+	Point* a = new Point();
+	Point* b = new Point();
+	for (unsigned int i = 0; i < cipherText.length() - 1; i += 2) {
 		a = getPointOfLetter(cipherText[i]);
 		b = getPointOfLetter(cipherText[i + 1]);
-
+		if (a == NULL || b == NULL) continue;
 		decryptCoordinates(a, b);
 
 		cipherText[i] = getLetterOfPoint(a);
