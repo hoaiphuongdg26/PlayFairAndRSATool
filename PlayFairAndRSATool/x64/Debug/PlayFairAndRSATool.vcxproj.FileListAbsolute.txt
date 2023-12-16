@@ -1,4 +1,11 @@
 D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.vcxproj.AssemblyReference.cache
 D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.MainForm.resources
+<<<<<<< HEAD
 D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.RSAForm.resources
 D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.vcxproj.GenerateResource.cache
+=======
+D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.vcxproj.AssemblyReference.cache
+D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.MainForm.resources
+D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.PlayFairForm.resources
+D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.vcxproj.GenerateResource.cache
+>>>>>>> b43b0cc32a76d0811d4dc7f33ec3a8eabbbc6ead

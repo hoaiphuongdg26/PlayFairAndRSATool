@@ -135,6 +135,8 @@
     <ResourceCompile Include="app.rc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="PlayfairCipher.h" />
+    <ClInclude Include="Point.h" />
     <ClInclude Include="MainForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -146,7 +148,11 @@
     <ClInclude Include="RSAForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="RSA_Utils.h" />
+=======
+    <ClInclude Include="Sanitizer.h" />
+>>>>>>> b43b0cc32a76d0811d4dc7f33ec3a8eabbbc6ead
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -157,7 +163,8 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="PlayFairForm.cpp" />
+    <ClCompile Include="PlayfairCipher.cpp" />
+    <ClCompile Include="Point.cpp" />
     <ClCompile Include="RSAForm.cpp" />
     <ClCompile Include="RSA_Utils.cpp" />
   </ItemGroup>
@@ -175,8 +182,13 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="RSAForm.resx">
       <DependentUpon>RSAForm.h</DependentUpon>
+=======
+    <EmbeddedResource Include="PlayFairForm.resx">
+      <DependentUpon>PlayFairForm.h</DependentUpon>
+>>>>>>> b43b0cc32a76d0811d4dc7f33ec3a8eabbbc6ead
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
