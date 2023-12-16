@@ -8,4 +8,11 @@ D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRS
 D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.MainForm.resources
 D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.PlayFairForm.resources
 D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.vcxproj.GenerateResource.cache
+<<<<<<< HEAD
 >>>>>>> b43b0cc32a76d0811d4dc7f33ec3a8eabbbc6ead
+=======
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.vcxproj.AssemblyReference.cache
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.MainForm.resources
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.PlayFairForm.resources
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.vcxproj.GenerateResource.cache
+>>>>>>> 497dc3e154567b7801bd58c9f913c915765ce56d
