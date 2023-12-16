@@ -3,3 +3,4 @@
 *.tlog
 *.vsidx
 *.ipch
+.vs/
