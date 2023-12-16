@@ -1,3 +1,54 @@
 ﻿  MainForm.cpp
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.h(622,21): warning C4566: character represented by universal-character-name '\u03A6' cannot be represented in the current code page (1252)
+  (compiling source file '/MainForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.h(531,9): warning C4996: 'BN_is_prime_ex': Since OpenSSL 3.0
+  (compiling source file '/MainForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.h(549,9): warning C4996: 'BN_is_prime_ex': Since OpenSSL 3.0
+  (compiling source file '/MainForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.h(653,9): warning C4996: 'BN_is_prime_ex': Since OpenSSL 3.0
+  (compiling source file '/MainForm.cpp')
+  
+  RSAForm.cpp
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.h(622,21): warning C4566: character represented by universal-character-name '\u03A6' cannot be represented in the current code page (1252)
+  (compiling source file '/RSAForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.h(531,9): warning C4996: 'BN_is_prime_ex': Since OpenSSL 3.0
+  (compiling source file '/RSAForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.h(549,9): warning C4996: 'BN_is_prime_ex': Since OpenSSL 3.0
+  (compiling source file '/RSAForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.h(653,9): warning C4996: 'BN_is_prime_ex': Since OpenSSL 3.0
+  (compiling source file '/RSAForm.cpp')
+  
+  RSA_Utils.cpp
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSA_Utils.cpp(81,12): warning C4996: 'BN_is_prime_ex': Since OpenSSL 3.0
+  (compiling source file '/RSA_Utils.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSA_Utils.cpp(88,9): warning C4996: 'BN_generate_prime': Since OpenSSL 0.9.8
+  (compiling source file '/RSA_Utils.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSA_Utils.cpp(89,15): warning C4996: 'BN_is_prime': Since OpenSSL 0.9.8
+  (compiling source file '/RSA_Utils.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSA_Utils.cpp(251,24): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  (compiling source file '/RSA_Utils.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSA_Utils.cpp(368,17): warning C4101: 'assciiValue': unreferenced local variable
+  (compiling source file '/RSA_Utils.cpp')
+  
+  Generating Code...
   AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+RSA_Utils.obj : warning LNK4248: unresolved typeref token (0100001A) for 'bignum_st'; image may not run
+RSAForm.obj : warning LNK4248: unresolved typeref token (0100002A) for 'bignum_st'; image may not run
+MainForm.obj : warning LNK4248: unresolved typeref token (01000030) for 'bignum_st'; image may not run
+RSA_Utils.obj : warning LNK4248: unresolved typeref token (01000020) for 'bignum_ctx'; image may not run
+RSAForm.obj : warning LNK4248: unresolved typeref token (01000036) for 'bignum_ctx'; image may not run
+MainForm.obj : warning LNK4248: unresolved typeref token (0100003B) for 'bignum_ctx'; image may not run
+RSA_Utils.obj : warning LNK4248: unresolved typeref token (01000021) for 'bn_gencb_st'; image may not run
+RSAForm.obj : warning LNK4248: unresolved typeref token (01000039) for 'bn_gencb_st'; image may not run
+MainForm.obj : warning LNK4248: unresolved typeref token (0100003D) for 'bn_gencb_st'; image may not run
   PlayFairAndRSATool.vcxproj -> D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.exe

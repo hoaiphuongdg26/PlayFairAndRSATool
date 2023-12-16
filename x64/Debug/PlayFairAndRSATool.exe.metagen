@@ -1,4 +1,5 @@
   PlayFairAndRSATool.MainForm.resources - Embedded, ContainedInManifestFile, 
+  PlayFairAndRSATool.RSAForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly PlayFairAndRSATool, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
 	hash=SHA1, flags=PublicKey

@@ -35,6 +35,9 @@
     <ClInclude Include="PlayFairForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="RSA_Utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainForm.cpp">
@@ -50,6 +53,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PlayFairForm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="RSA_Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
