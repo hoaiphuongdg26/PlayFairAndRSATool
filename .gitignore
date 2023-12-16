@@ -2,3 +2,4 @@
 *.db
 *.tlog
 *.vsidx
+*.ipch
