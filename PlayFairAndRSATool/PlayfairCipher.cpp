@@ -120,6 +120,10 @@ char PlayfairCipher::getLetterOfPoint(Point* a)
 }
 string PlayfairCipher::Encrypt(string input)
 {
+	if (matrixSize == 5) {
+		for (unsigned int i = 0; i < input.length(); i++)
+			if (input[i] == 'J') input[i] = 'I';
+	}
 	Point* a = new Point();
 	Point* b = new Point();
 	for (unsigned int i = 0; i < input.length() - 1; i += 2) {
@@ -150,6 +154,10 @@ void PlayfairCipher::encryptCoordinates(Point *a, Point* b) {
 }
 string PlayfairCipher::Decrypt(string cipherText)
 {
+	if (matrixSize == 5) {
+		for (unsigned int i = 0; i < cipherText.length(); i++)
+			if (cipherText[i] == 'J') cipherText[i] = 'I';
+	}
 	Point* a = new Point();
 	Point* b = new Point();
 	for (unsigned int i = 0; i < cipherText.length() - 1; i += 2) {
