@@ -40,14 +40,6 @@ namespace MainForm {
 	private: System::Windows::Forms::TextBox^ tb_Input;
 	protected:
 
-
-
-
-
-
-
-
-
 	private: System::Windows::Forms::Label^ label17;
 	private: System::Windows::Forms::Label^ label18;
 	private: System::Windows::Forms::TextBox^ tb_d;
@@ -269,6 +261,7 @@ namespace MainForm {
 			this->tb_e->Size = System::Drawing::Size(345, 22);
 			this->tb_e->TabIndex = 9;
 			this->tb_e->TextChanged += gcnew System::EventHandler(this, &RSAForm::tb_e_TextChanged);
+			this->tb_e->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &RSAForm::tb_e_KeyPress);
 			this->tb_e->Leave += gcnew System::EventHandler(this, &RSAForm::tb_e_Leave);
 			// 
 			// label10
@@ -414,6 +407,7 @@ namespace MainForm {
 			this->tb_q->Size = System::Drawing::Size(345, 22);
 			this->tb_q->TabIndex = 4;
 			this->tb_q->TextChanged += gcnew System::EventHandler(this, &RSAForm::tb_q_TextChanged);
+			this->tb_q->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &RSAForm::tb_q_KeyPress);
 			this->tb_q->Leave += gcnew System::EventHandler(this, &RSAForm::tb_q_Leave);
 			// 
 			// tb_p
@@ -423,6 +417,7 @@ namespace MainForm {
 			this->tb_p->Size = System::Drawing::Size(345, 22);
 			this->tb_p->TabIndex = 3;
 			this->tb_p->TextChanged += gcnew System::EventHandler(this, &RSAForm::tb_p_TextChanged);
+			this->tb_p->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &RSAForm::tb_p_KeyPress);
 			this->tb_p->Leave += gcnew System::EventHandler(this, &RSAForm::tb_p_Leave);
 			// 
 			// label4
@@ -479,6 +474,7 @@ namespace MainForm {
 			this->tb_bits->Name = L"tb_bits";
 			this->tb_bits->Size = System::Drawing::Size(195, 22);
 			this->tb_bits->TabIndex = 6;
+			this->tb_bits->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &RSAForm::tb_bits_KeyPress);
 			// 
 			// label2
 			// 
@@ -529,13 +525,13 @@ private: System::Void tb_p_Leave(System::Object^ sender, System::EventArgs^ e) {
 		BIGNUM* number = ConvertStringToBIGNUM(tb_p->Text);
 		if (number != nullptr) {
 			if (!BN_is_prime_ex(const_cast<BIGNUM*>(number), BN_prime_checks, NULL, NULL)) {
-				MessageBox::Show("Invalid input. Please enter a prime number.");
+				MessageBox::Show("Invalid input. Please enter a prime number p.");
 				tb_p->Text = "";
 				tb_p->Focus();
 			}
 		}
 		else {
-			MessageBox::Show("Invalid input. Please enter a valid integer.");
+			MessageBox::Show("Invalid input. Please enter a valid integer p.");
 			tb_p->Text = "";
 			tb_p->Focus();
 		}
@@ -543,17 +539,17 @@ private: System::Void tb_p_Leave(System::Object^ sender, System::EventArgs^ e) {
 	}
 }
 private: System::Void tb_q_Leave(System::Object^ sender, System::EventArgs^ e) {
-	if (tb_p->Text != "") {
+	if (tb_q->Text != "") {
 		BIGNUM* number = ConvertStringToBIGNUM(tb_q->Text);
 		if (number != nullptr) {
 			if (!BN_is_prime_ex(const_cast<BIGNUM*>(number), BN_prime_checks, NULL, NULL)) {
-				MessageBox::Show("Invalid input. Please enter a prime number.");
+				MessageBox::Show("Invalid input. Please enter a prime number q.");
 				tb_q->Text = "";
 				tb_q->Focus();
 			}
 		}
 		else {
-			MessageBox::Show("Invalid input. Please enter a valid integer.");
+			MessageBox::Show("Invalid input. Please enter a valid integer q.");
 			tb_q->Text = "";
 			tb_q->Focus();
 		}
@@ -587,7 +583,6 @@ private: System::Void btn_generatePrimeNum_Click(System::Object^ sender, System:
 		MessageBox::Show("Invalid input for bits.");
 	}
 }
-
 private: System::Void tb_p_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	updateRSAParameters();
 	tb_Output->Text = "";
@@ -597,76 +592,95 @@ private: System::Void tb_q_TextChanged(System::Object^ sender, System::EventArgs
 	tb_Output->Text = "";
 }
 void updateRSAParameters() {
-	BN_CTX* ctx = BN_CTX_new();
-	BIGNUM* num_N = BN_new();
-	BIGNUM* num_phiN = BN_new();
-	BIGNUM* num_e = BN_new();
-	BIGNUM* num_d = BN_new();
-	if (tb_p->Text != "" && tb_q->Text != "") {
-		// Tính N
-		if (!BN_mul(num_N, ConvertStringToBIGNUM(tb_p->Text), ConvertStringToBIGNUM(tb_q->Text), ctx)) {
-			MessageBox::Show("Error calculating N.");
-			BN_free(num_N);
-			return;
-		}
-		tb_N->Text = ConvertBIGNUMToString(num_N);
+	if (ConvertStringToBIGNUM(tb_p->Text) && ConvertStringToBIGNUM(tb_q->Text)) {
+		BN_CTX* ctx = BN_CTX_new();
+		BIGNUM* num_N = BN_new();
+		BIGNUM* num_phiN = BN_new();
+		BIGNUM* num_e = BN_new();
+		BIGNUM* num_d = BN_new();
+		if (tb_p->Text != "" && tb_q->Text != "") {
+			// Tính N
+			if (!BN_mul(num_N, ConvertStringToBIGNUM(tb_p->Text), ConvertStringToBIGNUM(tb_q->Text), ctx)) {
+				MessageBox::Show("Error calculating N.");
+				BN_free(num_N);
+				return;
+			}
+			tb_N->Text = ConvertBIGNUMToString(num_N);
 
-		// Tính ΦN
-		BIGNUM* number1 = BN_new(); // lưu giá trị (p-1)
-		BIGNUM* number2 = BN_new(); // lưu giá trị (q-1)
-		BIGNUM* one = BN_new();
-		BN_set_word(one, 1);
-		BN_sub(number1, ConvertStringToBIGNUM(tb_p->Text), one);
-		BN_sub(number2, ConvertStringToBIGNUM(tb_q->Text), one);
-		if (!BN_mul(num_phiN, number1, number2, ctx)) {
-			MessageBox::Show("Error calculating ΦN.");
-			BN_free(num_N);
-			BN_free(num_phiN);
+			// Tính ΦN
+			BIGNUM* number1 = BN_new(); // lưu giá trị (p-1)
+			BIGNUM* number2 = BN_new(); // lưu giá trị (q-1)
+			BIGNUM* one = BN_new();
+			BN_set_word(one, 1);
+			BN_sub(number1, ConvertStringToBIGNUM(tb_p->Text), one);
+			BN_sub(number2, ConvertStringToBIGNUM(tb_q->Text), one);
+			if (!BN_mul(num_phiN, number1, number2, ctx)) {
+				MessageBox::Show("Error calculating ΦN.");
+				BN_free(num_N);
+				BN_free(num_phiN);
+				BN_free(number1);
+				BN_free(number2);
+				return;
+			}
+			tb_phiN->Text = ConvertBIGNUMToString(num_phiN);
+
+			// Tính public key e
+			num_e = createRandomPrime_e(num_phiN);
+			tb_e->Text = ConvertBIGNUMToString(num_e);
+
+			// Tính private key d
+			num_d = calculateD(num_e, num_phiN);
+			tb_d->Text = ConvertBIGNUMToString(num_d);
+
+			// Giải phóng bộ nhớ
 			BN_free(number1);
 			BN_free(number2);
-			return;
 		}
-		tb_phiN->Text = ConvertBIGNUMToString(num_phiN);
-
-		// Tính public key e
-		num_e = createRandomPrime_e(num_phiN);
-		tb_e->Text = ConvertBIGNUMToString(num_e);
-
-		// Tính private key d
-		num_d = calculateD(num_e, num_phiN);
-		tb_d->Text = ConvertBIGNUMToString(num_d);
-
-		// Giải phóng bộ nhớ
-		BN_free(number1);
-		BN_free(number2);
+		BN_CTX_free(ctx);
+		BN_free(num_N);
+		BN_free(num_phiN);
+		BN_free(num_e);
+		BN_free(num_d);
 	}
-	BN_CTX_free(ctx);
-	BN_free(num_N);
-	BN_free(num_phiN);
-	BN_free(num_e);
-	BN_free(num_d);
+	else {
+		tb_N->Clear();
+		tb_phiN->Clear();
+		tb_e->Clear();
+		tb_d->Clear();
+	}
 }
 private: System::Void tb_e_Leave(System::Object^ sender, System::EventArgs^ e) {
-	if (tb_e->Text != "") {
-		BIGNUM* number = ConvertStringToBIGNUM(tb_p->Text);
-		if (number != nullptr) {
-			if (!BN_is_prime_ex(const_cast<BIGNUM*>(number), BN_prime_checks, NULL, NULL)) {
-				MessageBox::Show("Invalid input. Please enter a prime number.");
+	if (tb_q->Text == "" || tb_p->Text == "") {
+		MessageBox::Show("Please enter number p and q before.");
+		tb_e->Text = "";
+	}
+	else {
+		if (tb_e->Text != "") {
+			BIGNUM* num_e = ConvertStringToBIGNUM(tb_e->Text);
+			BIGNUM* num_phiN = ConvertStringToBIGNUM(tb_phiN->Text);
+			if (num_e != nullptr && num_phiN != nullptr) {
+				if (!checkEConditions(num_e, num_phiN)) {
+					MessageBox::Show("Invalid input. Please enter a prime number e. It should not share common factors with φ(N).");
+					tb_e->Text = "";
+					tb_e->Focus();
+				}
+			}
+			else {
+				MessageBox::Show("Invalid input. Please enter a valid integer e.");
 				tb_e->Text = "";
 				tb_e->Focus();
 			}
+			BN_free(num_e);
+			BN_free(num_phiN);
 		}
-		else {
-			MessageBox::Show("Invalid input. Please enter a valid integer.");
-			tb_e->Text = "";
-			tb_e->Focus();
+		if (tb_e->Text != "" && tb_q->Text != "" && tb_p->Text != "") {
+			// Tính private key d
+			BIGNUM* num_d = calculateD(ConvertStringToBIGNUM(tb_e->Text), ConvertStringToBIGNUM(tb_phiN->Text));
+			tb_d->Text = ConvertBIGNUMToString(num_d);
+			BN_free(num_d);
 		}
-		BN_free(number);
+		else tb_d->Clear();
 	}
-	// Tính private key d
-	BIGNUM* num_d = calculateD(ConvertStringToBIGNUM(tb_e->Text), ConvertStringToBIGNUM(tb_phiN->Text));
-	tb_d->Text = ConvertBIGNUMToString(num_d);
-	BN_free(num_d);
 }
 private: System::Void btn_updateParameters_Click(System::Object^ sender, System::EventArgs^ e) {
 	// Tính public key e
@@ -758,14 +772,31 @@ private: System::Void btn_Decrypt_Click(System::Object^ sender, System::EventArg
 	else MessageBox::Show("Invalid Input String For Decrypt");
 }
 private: System::Void tb_e_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	if (tb_q->Text == "" || tb_p->Text == "") {
-		MessageBox::Show("Please enter number p and q before.");
-		tb_e->Text = "";
-	}
 	tb_Output->Text = "";
 }
 private: System::Void tb_Input_TextChanged(System::Object^ sender, System::EventArgs^ e) {
 	tb_Output->Text = "";
+}
+private: System::Void tb_p_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+	if (e->KeyChar == (char)Keys::Enter) {
+		tb_q->Focus();
+	}
+}
+private: System::Void tb_q_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+	if (e->KeyChar == (char)Keys::Enter) {
+		tb_e->Focus();
+	}
+}
+private: System::Void tb_e_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+	if (e->KeyChar == (char)Keys::Enter) {
+		tb_Input->Focus();
+	}
+}
+private: System::Void tb_bits_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
+	if (e->KeyChar == (char)Keys::Enter) {
+		btn_generatePrimeNum_Click(sender, e);
+		tb_e->Focus();
+	}
 }
 };
 }

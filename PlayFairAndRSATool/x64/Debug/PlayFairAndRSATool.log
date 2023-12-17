@@ -1,11 +1,70 @@
-﻿  AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+﻿  MainForm.cpp
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.h(618,22): warning C4566: character represented by universal-character-name '\u03A6' cannot be represented in the current code page (1252)
+  (compiling source file '/MainForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.h(663,23): warning C4566: character represented by universal-character-name '\u03C6' cannot be represented in the current code page (1252)
+  (compiling source file '/MainForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.h(527,9): warning C4996: 'BN_is_prime_ex': Since OpenSSL 3.0
+  (compiling source file '/MainForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.h(545,9): warning C4996: 'BN_is_prime_ex': Since OpenSSL 3.0
+  (compiling source file '/MainForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(896,17): warning C4477: 'sprintf' : format string '%s' requires an argument of type 'char *', but variadic argument 1 has type 'System::String ^'
+  (compiling source file '/MainForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(896,3): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  (compiling source file '/MainForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(953,94): warning C4244: 'argument': conversion from 'wchar_t' to 'char', possible loss of data
+  (compiling source file '/MainForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(953,70): warning C4244: 'argument': conversion from 'wchar_t' to 'char', possible loss of data
+  (compiling source file '/MainForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(972,19): warning C4244: 'argument': conversion from 'wchar_t' to '_Elem', possible loss of data
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(972,19): warning C4244:         with
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(972,19): warning C4244:         [
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(972,19): warning C4244:             _Elem=char
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(972,19): warning C4244:         ]
+  (compiling source file '/MainForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(980,19): warning C4244: 'argument': conversion from 'wchar_t' to '_Elem', possible loss of data
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(980,19): warning C4244:         with
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(980,19): warning C4244:         [
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(980,19): warning C4244:             _Elem=char
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(980,19): warning C4244:         ]
+  (compiling source file '/MainForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(1015,95): warning C4244: 'argument': conversion from 'wchar_t' to 'char', possible loss of data
+  (compiling source file '/MainForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.h(1015,71): warning C4244: 'argument': conversion from 'wchar_t' to 'char', possible loss of data
+  (compiling source file '/MainForm.cpp')
+  
+  RSAForm.cpp
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.h(618,22): warning C4566: character represented by universal-character-name '\u03A6' cannot be represented in the current code page (1252)
+  (compiling source file '/RSAForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.h(663,23): warning C4566: character represented by universal-character-name '\u03C6' cannot be represented in the current code page (1252)
+  (compiling source file '/RSAForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.h(527,9): warning C4996: 'BN_is_prime_ex': Since OpenSSL 3.0
+  (compiling source file '/RSAForm.cpp')
+  
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.h(545,9): warning C4996: 'BN_is_prime_ex': Since OpenSSL 3.0
+  (compiling source file '/RSAForm.cpp')
+  
+  Generating Code...
+  AssemblyInfo.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
 RSA_Utils.obj : warning LNK4248: unresolved typeref token (0100001A) for 'bignum_st'; image may not run
-RSAForm.obj : warning LNK4248: unresolved typeref token (0100002A) for 'bignum_st'; image may not run
+RSAForm.obj : warning LNK4248: unresolved typeref token (0100002B) for 'bignum_st'; image may not run
 MainForm.obj : warning LNK4248: unresolved typeref token (0100003E) for 'bignum_st'; image may not run
 RSA_Utils.obj : warning LNK4248: unresolved typeref token (01000020) for 'bignum_ctx'; image may not run
-RSAForm.obj : warning LNK4248: unresolved typeref token (01000036) for 'bignum_ctx'; image may not run
+RSAForm.obj : warning LNK4248: unresolved typeref token (01000037) for 'bignum_ctx'; image may not run
 MainForm.obj : warning LNK4248: unresolved typeref token (01000047) for 'bignum_ctx'; image may not run
 RSA_Utils.obj : warning LNK4248: unresolved typeref token (01000021) for 'bn_gencb_st'; image may not run
-RSAForm.obj : warning LNK4248: unresolved typeref token (01000039) for 'bn_gencb_st'; image may not run
-MainForm.obj : warning LNK4248: unresolved typeref token (01000049) for 'bn_gencb_st'; image may not run
+RSAForm.obj : warning LNK4248: unresolved typeref token (0100003B) for 'bn_gencb_st'; image may not run
+MainForm.obj : warning LNK4248: unresolved typeref token (0100004A) for 'bn_gencb_st'; image may not run
   PlayFairAndRSATool.vcxproj -> D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.exe
