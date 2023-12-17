@@ -148,11 +148,8 @@
     <ClInclude Include="RSAForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
-<<<<<<< HEAD
     <ClInclude Include="RSA_Utils.h" />
-=======
     <ClInclude Include="Sanitizer.h" />
->>>>>>> b43b0cc32a76d0811d4dc7f33ec3a8eabbbc6ead
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AssemblyInfo.cpp" />
@@ -182,13 +179,11 @@
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
     </EmbeddedResource>
-<<<<<<< HEAD
     <EmbeddedResource Include="RSAForm.resx">
       <DependentUpon>RSAForm.h</DependentUpon>
-=======
+    </EmbeddedResource>
     <EmbeddedResource Include="PlayFairForm.resx">
       <DependentUpon>PlayFairForm.h</DependentUpon>
->>>>>>> b43b0cc32a76d0811d4dc7f33ec3a8eabbbc6ead
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

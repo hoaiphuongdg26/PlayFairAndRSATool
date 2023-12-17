@@ -984,7 +984,7 @@ private: System::Void btn_Encrypt_Click(System::Object^ sender, System::EventArg
 		for (int i = 0; i < temp.length(); i++) {
 			result += temp[i];
 			//Tach cac ki tu trung nhau : aa -> ax ax; xx -> xy xy
-			if (i + 1 < temp.length() && temp[i + 1] == temp[i] && result.length() % 2) {
+			if (i + 1 < temp.length() && (temp[i + 1] == temp[i]|| (temp[i + 1] == 'I' && temp[i]=='J') || (temp[i + 1] == 'J' && temp[i] == 'I')) && result.length() % 2) {
 				if (temp[i] != sep1) result += sep1;
 				else result += sep2;
 			}
