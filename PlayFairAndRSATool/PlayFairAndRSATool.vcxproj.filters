@@ -35,9 +35,9 @@
     <ClInclude Include="PlayFairForm.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-<<<<<<< HEAD
     <ClInclude Include="RSA_Utils.h">
-=======
+    <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -45,7 +45,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Sanitizer.h">
->>>>>>> b43b0cc32a76d0811d4dc7f33ec3a8eabbbc6ead
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

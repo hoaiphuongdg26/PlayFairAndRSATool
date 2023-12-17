@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\AssemblyInfo.cpp;D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\AssemblyInfo.obj
 D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\MainForm.cpp;D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\MainForm.obj
 D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\pch.cpp;D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\pch.obj
-D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairForm.cpp;D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairForm.obj
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\PlayfairCipher.cpp;D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayfairCipher.obj
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\Point.cpp;D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\Point.obj
 D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.cpp;D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\RSAForm.obj
 D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\RSA_Utils.cpp;D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\RSA_Utils.obj
 D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cpp;D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.obj
-=======
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\AssemblyInfo.cpp;D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\AssemblyInfo.obj
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\MainForm.cpp;D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\MainForm.obj
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\pch.cpp;D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\pch.obj
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\Point.cpp;D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\Point.obj
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\RSAForm.cpp;D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\RSAForm.obj
-D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.cpp;D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\.NETFramework,Version=v4.7.2.AssemblyAttributes.obj
->>>>>>> b43b0cc32a76d0811d4dc7f33ec3a8eabbbc6ead
