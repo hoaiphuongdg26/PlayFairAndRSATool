@@ -1,7 +1,7 @@
 ﻿#include "pch.h"
 #include "RSA_Utils.h"
 
-// Hàm chuyển đổi char sang BIGNUM
+// Hàm chuyển đổi char sang BIGNUM*
 BIGNUM* ConvertCharToAsciiBIGNUM(char character) {
     // Chuyển ký tự thành một dãy byte
     unsigned char byteValue = static_cast<unsigned char>(character);
@@ -12,6 +12,24 @@ BIGNUM* ConvertCharToAsciiBIGNUM(char character) {
     return result;
 }
 
+// Hàm chuyển đổi giá trị Ascii ở kiểu BIGNUM* thành ký tự char
+char ConvertBIGNUMToChar(const BIGNUM* asciiValue) {
+    // Convert BIGNUM to decimal string
+    char* decimalStr = BN_bn2dec(asciiValue);
+
+    // Convert decimal string to integer
+    int intValue = atoi(decimalStr);
+
+    // Free allocated memory
+    OPENSSL_free(decimalStr);
+
+    // Convert integer to char
+    char character = static_cast<char>(intValue);
+
+    return character;
+}
+
+// Hàm chuyển đổi System::String^ sang BIGNUM*
 BIGNUM* ConvertStringToBIGNUM(System::String^ input) {
     // Chuyển đổi System::String^ sang string
     string inputString = msclr::interop::marshal_as<string>(input);
@@ -45,6 +63,7 @@ System::String^ ConvertBIGNUMToString(BIGNUM* number) {
     return result;
 }
 
+// Hàm chuyển đổi vector<BIGNUM*> sang System::String^
 System::String^ ConvertBIGNUMVectorToString(const vector<BIGNUM*>& bignumVector) {
     string resultString;
 
@@ -62,8 +81,7 @@ System::String^ ConvertBIGNUMVectorToString(const vector<BIGNUM*>& bignumVector)
         }
         else {
             // Xử lý lỗi nếu chuyển đổi không thành công
-            // (trong trường hợp bạn muốn xử lý lỗi)
-            resultString += "Conversion Error";
+            return nullptr;
         }
 
         // Thêm dấu "#" giữa các chuỗi BIGNUM
@@ -74,7 +92,6 @@ System::String^ ConvertBIGNUMVectorToString(const vector<BIGNUM*>& bignumVector)
     return msclr::interop::marshal_as<System::String^>(resultString);
 }
 
-
 // Hàm kiểm tra số nguyên tố (Dùng trong file này thôi, file khác dùng trực tiếp dòng code)
 bool primalityCheck(const BIGNUM* num) {
     // Kiểm tra số nguyên tố
@@ -84,9 +101,21 @@ bool primalityCheck(const BIGNUM* num) {
 // Hàm tạo số nguyên tố ngẫu nhiên với số bit được nhập vào
 BIGNUM* createRandomPrime(int numBits) {
     BIGNUM* randomNum = BN_new();
-    do {
-        BN_generate_prime(randomNum, numBits, NULL, NULL, NULL, NULL, NULL);
-    } while (!BN_is_prime(randomNum, NULL, NULL, NULL, NULL));
+
+    // Kiểm tra giá trị trả về từ BN_generate_prime
+    if (!BN_generate_prime(randomNum, numBits, NULL, NULL, NULL, NULL, NULL)) {
+        // Xử lý lỗi và giải phóng bộ nhớ
+        BN_free(randomNum);
+        return nullptr;
+    }
+
+    // Kiểm tra xem số tạo ra có phải là số nguyên tố không
+    if (!BN_is_prime(randomNum, NULL, NULL, NULL, NULL)) {
+        // Xử lý lỗi và giải phóng bộ nhớ
+        BN_free(randomNum);
+        return nullptr;
+    }
+
     return randomNum;
 }
 
@@ -97,7 +126,7 @@ BIGNUM* gcd(const BIGNUM* a, const BIGNUM* b) {
     return result;
 }
 
- //Hàm tạo số nguyên tố e đặc biệt ngẫu nhiên
+//Hàm tạo số nguyên tố e đặc biệt ngẫu nhiên
 BIGNUM* createRandomPrime_e(BIGNUM* phiN) {
     BIGNUM* num = createRandomPrime(BN_num_bits(phiN));
 
@@ -115,6 +144,22 @@ BIGNUM* createRandomPrime_e(BIGNUM* phiN) {
     return nullptr;
 }
 
+// Hàm kiểm tra điều kiện của e
+bool checkEConditions(BIGNUM* e, BIGNUM* phiN) {
+    // Kiểm tra xem e có phải là số nguyên tố không
+    if (!primalityCheck(e)) {
+        return false;
+    }
+
+    // Kiểm tra xem gcd(e, phiN) có bằng 1 không
+    BIGNUM* gcdResult = gcd(e, phiN);
+    bool satisfiesConditions = BN_is_one(gcdResult);
+
+    // Giải phóng bộ nhớ
+    BN_free(gcdResult);
+
+    return satisfiesConditions;
+}
 // Thuật toán Euclidean
 BIGNUM* ExtendedEuclidean(BIGNUM* a, BIGNUM* b, BIGNUM* x, BIGNUM* y) {
     // Trường hợp cơ bản: Nếu b bằng 0, ta đã tìm thấy x và y.
@@ -193,15 +238,7 @@ vector<string> splitStringIntoBlocks(string input, int blockLength) {
     return blocks;
 }
 
-
-// Hàm giải phóng bộ nhớ cho vector<BIGNUM *>
-void freeVectorMemory(std::vector<BIGNUM*>& vec) {
-    for (auto& item : vec) {
-        BN_free(item);
-    }
-    vec.clear();
-}
-
+// Hàm tính độ dài mỗi khối dựa trên N
 int calculateBlockLength(const BIGNUM* N) {
     // Tính độ dài bit của N
     int bitLength = BN_num_bytes(N);
@@ -209,7 +246,7 @@ int calculateBlockLength(const BIGNUM* N) {
     return bitLength - 1;
 }
 
-
+// Hàm mã hoá
 System::String^ EncryptStringOrNumber(const string input, const BIGNUM* e, const BIGNUM* N) {
     BN_CTX* ctx = BN_CTX_new();
     BIGNUM* base = BN_new();
@@ -244,7 +281,6 @@ System::String^ EncryptStringOrNumber(const string input, const BIGNUM* e, const
         // Lặp qua từng block
         for (const auto& block : blocks) {
             BIGNUM* textBlockInBase10 = BN_new();
-            string decimalString = BN_bn2dec(textBlockInBase10);//debug
             int exponent = 0;
             BIGNUM* exponentBIGNUM = BN_new();
             // Lặp qua từng ký tự trong mỗi block, từ cuối lên đầu
@@ -258,16 +294,13 @@ System::String^ EncryptStringOrNumber(const string input, const BIGNUM* e, const
                 BN_set_word(exponentBIGNUM, exponent);
                 // Tính nè
                 BN_exp(result, base, exponentBIGNUM, ctx);
-                 decimalString = BN_bn2dec(result);//debug
 
                 //Tính mỗi ký tự: temp = Asscii * 256^exponent 
                 BIGNUM* temp = BN_new();
                 BN_mul(temp, asciiValue, result, ctx);
-                 decimalString = BN_bn2dec(temp);//debug
 
                 //Cộng vào từng block
                 BN_add(textBlockInBase10, textBlockInBase10, temp);
-                 decimalString = BN_bn2dec(textBlockInBase10);//debug
 
                 BN_free(asciiValue);
                 BN_free(result);
@@ -278,10 +311,7 @@ System::String^ EncryptStringOrNumber(const string input, const BIGNUM* e, const
             BN_free(exponentBIGNUM);
             // Mã hóa số nguyên lớn
             BIGNUM* encryptedBlock = BN_new();
-            decimalString = BN_bn2dec(e);//debug
-            decimalString = BN_bn2dec(N);//debug
             BN_mod_exp(encryptedBlock, textBlockInBase10, e, N, ctx);
-            decimalString = BN_bn2dec(encryptedBlock);//debug
             // Lưu lại các block
             textInputInBase10Format.push_back(textBlockInBase10);
             cipherText.push_back(encryptedBlock);
@@ -297,12 +327,13 @@ System::String^ EncryptStringOrNumber(const string input, const BIGNUM* e, const
     }
 }
 
-std::vector<BIGNUM*> ConvertToVector(const std::string input) {
-    std::vector<BIGNUM*> result;
+// Hàm chia chuỗi BIGNUM* vào biến vector<BIGNUM*>
+vector<BIGNUM*> ConvertToVector(const string input) {
+    vector<BIGNUM*> result;
     size_t start = 0;
     size_t end = input.find('#');
 
-    while (end != std::string::npos) {
+    while (end != string::npos) {
         std::string substr = input.substr(start, end - start);
 
         // Xoá khoảng trắng trong chuỗi
@@ -316,7 +347,7 @@ std::vector<BIGNUM*> ConvertToVector(const std::string input) {
         else {
             // Xử lý lỗi chuyển đổi
             BN_free(number);
-            // Bạn có thể thêm xử lý lỗi khác tùy thuộc vào yêu cầu của bạn
+            return {};
         }
 
         start = end + 1;
@@ -331,94 +362,83 @@ std::vector<BIGNUM*> ConvertToVector(const std::string input) {
     }
     else {
         BN_free(lastNumber);
-        // Xử lý lỗi chuyển đổi
-        // Bạn có thể thêm xử lý lỗi khác tùy thuộc vào yêu cầu của bạn
+        return {};
     }
-
     return result;
 }
 
-char ConvertBignumToChar(const BIGNUM* asciiValue) {
-    // Convert BIGNUM to decimal string
-    char* decimalStr = BN_bn2dec(asciiValue);
-
-    // Convert decimal string to integer
-    int intValue = atoi(decimalStr);
-
-    // Free allocated memory
-    OPENSSL_free(decimalStr);
-
-    // Convert integer to char
-    char character = static_cast<char>(intValue);
-
-    return character;
-}
+// Hàm giải mã
 System::String^ Decrypt(string input, const BIGNUM* d, const BIGNUM* N) {
     BN_CTX* ctx = BN_CTX_new();
     try {
         // Chuyển chuỗi input đầu vào thành dạng vector
         vector<BIGNUM*> cipherText = ConvertToVector(input);
+        if (cipherText.empty()) {
+            // Xử lý trường hợp lỗi
+            return nullptr;
+        }
+        else {
+            // Lưu trữ chuỗi text sau khi decode
+            string plainText = "";
 
-        // Lưu trữ chuỗi text sau khi decode
-        string plainText = "";
+            //Lặp qua từng khối
+            for (int i = 0; i < cipherText.size(); i++) {
+                // Lưu trữ chuỗi ASCII
+                int assciiValue;
+                BIGNUM* decryptedBlock = BN_new();
+                BN_mod_exp(decryptedBlock, cipherText[i], d, N, ctx);
+                string plainBlock = "";
 
-        //Lặp qua từng khối
-        for (int i = 0; i < cipherText.size(); i++) {
-            // Lưu trữ chuỗi ASCII
-            int assciiValue;
-            BIGNUM* decryptedBlock = BN_new();
-            BN_mod_exp(decryptedBlock, cipherText[i], d, N, ctx);
-            string plainBlock = "";
+                // Chuyển kết quả giải mã thành chuỗi ASCII
+                int exponent = 0;
+                while (exponent < calculateBlockLength(N)) {
+                    BIGNUM* temp = BN_dup(decryptedBlock);
+                    BIGNUM* jBIGNUM = BN_new();
+                    // Phần tử số: temp = temp % Pow(256, i)
+                    for (int j = calculateBlockLength(N) - 1; j > exponent; j--) {
+                        BN_set_word(jBIGNUM, j);
 
-            // Chuyển kết quả giải mã thành chuỗi ASCII
-            int exponent = 0;
-            while (exponent < calculateBlockLength(N)) {
-                BIGNUM* temp = BN_dup(decryptedBlock);
-                BIGNUM* jBIGNUM = BN_new();
-                // Phần tử số: temp = temp % Pow(256, i)
-                for (int j = calculateBlockLength(N) - 1; j > exponent; j--) {
-                    BN_set_word(jBIGNUM, j);
+                        BIGNUM* base = BN_new(); BN_set_word(base, 256);
+                        // Tính Pow(256, j)
+                        BIGNUM* pow256 = BN_new();
+                        BN_exp(pow256, base, jBIGNUM, ctx);
+                        // Tính temp = temp % Pow(256, i)
+                        BN_mod(temp, temp, pow256, ctx);
+                        BN_free(pow256);
+                        BN_free(base);
+                    }
+                    // Giải phóng bộ nhớ
+                    BN_free(jBIGNUM);
 
+                    // Tính asciiValue_BIGNUM = temp / Pow(256, exponent)
+                    BIGNUM* asciiValue_ = BN_new();
+                    BIGNUM* resultPowofBaseExponent = BN_new();
+                    BIGNUM* remainder = BN_new();
                     BIGNUM* base = BN_new(); BN_set_word(base, 256);
-                    // Tính Pow(256, j)
-                    BIGNUM* pow256 = BN_new();
-                    BN_exp(pow256, base, jBIGNUM, ctx);
-                    // Tính temp = temp % Pow(256, i)
-                    BN_mod(temp, temp, pow256, ctx);
-                    BN_free(pow256);
+                    BIGNUM* exponentBIGNUM = BN_new(); BN_set_word(exponentBIGNUM, exponent);
+                    BN_exp(resultPowofBaseExponent, base, exponentBIGNUM, ctx);
+                    BN_div(asciiValue_, remainder, temp, resultPowofBaseExponent, ctx);
+
+                    // Chuyển giá trị Ascii thành ký tự
+                    plainBlock += ConvertBIGNUMToChar(asciiValue_);
+
+                    exponent++;
+                    BN_free(temp);
+                    BN_free(asciiValue_);
+                    BN_free(resultPowofBaseExponent);
+                    BN_free(exponentBIGNUM);
+                    BN_free(remainder);
                     BN_free(base);
                 }
-                // Giải phóng bộ nhớ
-                BN_free(jBIGNUM);
 
-                // Tính asciiValue_BIGNUM = temp / Pow(256, exponent)
-                BIGNUM* asciiValue_ = BN_new();
-                BIGNUM* resultPowofBaseExponent = BN_new();
-                BIGNUM* remainder = BN_new();
-                BIGNUM* base = BN_new(); BN_set_word(base, 256);
-                BIGNUM* exponentBIGNUM = BN_new(); BN_set_word(exponentBIGNUM, exponent);
-                BN_exp(resultPowofBaseExponent, base, exponentBIGNUM, ctx);
-                BN_div(asciiValue_, remainder, temp, resultPowofBaseExponent, ctx);
+                // Đảo ngược chuỗi lại để được chuỗi plainBlock hoàn chỉnh
+                reverse(plainBlock.begin(), plainBlock.end());
+                plainText += plainBlock;
 
-                // Chuyển giá trị Ascii thành ký tự
-                plainBlock += ConvertBignumToChar(asciiValue_);
-
-                exponent++;
-                BN_free(temp);
-                BN_free(asciiValue_);
-                BN_free(resultPowofBaseExponent);
-                BN_free(exponentBIGNUM);
-                BN_free(remainder);
-                BN_free(base);
+                BN_free(decryptedBlock);
             }
-
-            // Đảo ngược chuỗi lại để được chuỗi plainBlock hoàn chỉnh
-            reverse(plainBlock.begin(), plainBlock.end());
-            plainText += plainBlock;
-
-            BN_free(decryptedBlock);
+            return gcnew System::String(plainText.c_str());
         }
-        return gcnew System::String(plainText.c_str());
     }
     finally {
         // Clean up BN_CTX in case of exception

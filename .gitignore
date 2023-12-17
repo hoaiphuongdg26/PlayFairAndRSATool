@@ -128,3 +128,5 @@ $RECYCLE.BIN/
 # log files
 *.log
 *.tlog
+/PlayFairAndRSATool/x64/Debug
+/x64/Debug
