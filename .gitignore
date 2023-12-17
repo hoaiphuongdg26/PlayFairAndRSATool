@@ -1,6 +1,6 @@
-*.suo
-*.db
+/.idea/
+/.vs/
+/.vscode/
+*.txt
 *.tlog
-*.vsidx
-*.ipch
-.vs/
+*.log
