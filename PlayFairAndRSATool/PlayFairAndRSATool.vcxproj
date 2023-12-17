@@ -80,12 +80,17 @@
       <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>D:\OpenSSL\OpenSSL-Win64\include</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies />
+      <AdditionalDependencies>libcrypto.lib</AdditionalDependencies>
       <SubSystem>Windows</SubSystem>
       <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalLibraryDirectories>D:\OpenSSL\OpenSSL-Win64\lib\VC\x64\MD</AdditionalLibraryDirectories>
     </Link>
+    <ProjectReference>
+      <UseLibraryDependencyInputs>true</UseLibraryDependencyInputs>
+    </ProjectReference>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -143,6 +148,7 @@
     <ClInclude Include="RSAForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="RSA_Utils.h" />
     <ClInclude Include="Sanitizer.h" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +163,7 @@
     <ClCompile Include="PlayfairCipher.cpp" />
     <ClCompile Include="Point.cpp" />
     <ClCompile Include="RSAForm.cpp" />
+    <ClCompile Include="RSA_Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="app.ico" />
@@ -171,6 +178,9 @@
   <ItemGroup>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RSAForm.resx">
+      <DependentUpon>RSAForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlayFairForm.resx">
       <DependentUpon>PlayFairForm.h</DependentUpon>

@@ -1,20 +1,19 @@
 ﻿#pragma once
 #include <string>
-#include <cliext/vector>
 #include "Point.h"
+#include "Sanitizer.h"
 using namespace std;
 
 ref class PlayfairCipher {
 public:
     PlayfairCipher(int size);
-    string Encrypt(string plainText, string key);
-    string Decrypt(string cipherText, string key);
-    void print();
-    cliext::vector<cliext::vector<string>> getMatrix();
-
-private:
-    cliext::vector<cliext::vector<string>> playfairMatrix;
-    void createKeyMatrix(string& key);
+    string Encrypt(string input);
+    string Decrypt(string cipherText);
+    //void print();
+    char** getMatrix();
+    char** playfairMatrix;
+    int matrixSize;
+    void createKeyMatrix(string key);
     void encryptCoordinates(Point* a, Point* b);
     void decryptCoordinates(Point* a, Point* b);
     char getLetterOfPoint(Point* a);

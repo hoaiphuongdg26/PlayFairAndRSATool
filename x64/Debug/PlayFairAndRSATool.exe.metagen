@@ -1,4 +1,5 @@
   PlayFairAndRSATool.MainForm.resources - Embedded, ContainedInManifestFile, 
+  PlayFairAndRSATool.RSAForm.resources - Embedded, ContainedInManifestFile, 
   PlayFairAndRSATool.PlayFairForm.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly PlayFairAndRSATool, Version=1.0.*, Culture=Invariant Language (Invariant Country): 
@@ -21,6 +22,8 @@ Class MainForm.RSAForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
 Class PlayFairAndRSATool.PlayFairForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    System.Windows.Forms.Button btn_00 : Public
 Class MainForm.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

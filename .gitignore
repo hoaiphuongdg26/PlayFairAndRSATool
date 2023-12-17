@@ -1,1 +1,6 @@
-.tlog
+/.idea/
+/.vs/
+/.vscode/
+*.txt
+*.tlog
+*.log

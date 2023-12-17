@@ -51,9 +51,12 @@ namespace PlayFairAndRSATool {
 
 
 	private: System::Windows::Forms::Button^ btn_ClrKey;
+	private: System::Windows::Forms::TextBox^ tb_Formatted;
 
-	private: System::Windows::Forms::TextBox^ textBox1;
-	private: System::Windows::Forms::TextBox^ textBox2;
+	private: System::Windows::Forms::TextBox^ tb_Encrypted;
+
+
+
 	private: System::Windows::Forms::Label^ label4;
 	private: System::Windows::Forms::Label^ label5;
 	private: System::Windows::Forms::CheckBox^ cb_5x5;
@@ -162,8 +165,8 @@ namespace PlayFairAndRSATool {
 			this->btn_Decrypt = (gcnew System::Windows::Forms::Button());
 			this->btn_ClrInput = (gcnew System::Windows::Forms::Button());
 			this->btn_ClrKey = (gcnew System::Windows::Forms::Button());
-			this->textBox1 = (gcnew System::Windows::Forms::TextBox());
-			this->textBox2 = (gcnew System::Windows::Forms::TextBox());
+			this->tb_Formatted = (gcnew System::Windows::Forms::TextBox());
+			this->tb_Encrypted = (gcnew System::Windows::Forms::TextBox());
 			this->label4 = (gcnew System::Windows::Forms::Label());
 			this->label5 = (gcnew System::Windows::Forms::Label());
 			this->cb_5x5 = (gcnew System::Windows::Forms::CheckBox());
@@ -239,6 +242,7 @@ namespace PlayFairAndRSATool {
 			this->tb_Key->Name = L"tb_Key";
 			this->tb_Key->Size = System::Drawing::Size(257, 77);
 			this->tb_Key->TabIndex = 1;
+			this->tb_Key->TextChanged += gcnew System::EventHandler(this, &PlayFairForm::tb_Key_TextChanged);
 			// 
 			// tb_Input
 			// 
@@ -275,6 +279,7 @@ namespace PlayFairAndRSATool {
 			this->btn_Encrypt->TabIndex = 2;
 			this->btn_Encrypt->Text = L"Encrypt";
 			this->btn_Encrypt->UseVisualStyleBackColor = true;
+			this->btn_Encrypt->Click += gcnew System::EventHandler(this, &PlayFairForm::btn_Encrypt_Click);
 			// 
 			// btn_Decrypt
 			// 
@@ -284,6 +289,7 @@ namespace PlayFairAndRSATool {
 			this->btn_Decrypt->TabIndex = 2;
 			this->btn_Decrypt->Text = L"Decrypt";
 			this->btn_Decrypt->UseVisualStyleBackColor = true;
+			this->btn_Decrypt->Click += gcnew System::EventHandler(this, &PlayFairForm::btn_Decrypt_Click);
 			// 
 			// btn_ClrInput
 			// 
@@ -293,6 +299,7 @@ namespace PlayFairAndRSATool {
 			this->btn_ClrInput->TabIndex = 2;
 			this->btn_ClrInput->Text = L"Clear Input";
 			this->btn_ClrInput->UseVisualStyleBackColor = true;
+			this->btn_ClrInput->Click += gcnew System::EventHandler(this, &PlayFairForm::btn_ClrInput_Click);
 			// 
 			// btn_ClrKey
 			// 
@@ -302,24 +309,25 @@ namespace PlayFairAndRSATool {
 			this->btn_ClrKey->TabIndex = 2;
 			this->btn_ClrKey->Text = L"Clear Key";
 			this->btn_ClrKey->UseVisualStyleBackColor = true;
+			this->btn_ClrKey->Click += gcnew System::EventHandler(this, &PlayFairForm::btn_ClrKey_Click);
 			// 
-			// textBox1
+			// tb_Formatted
 			// 
-			this->textBox1->Location = System::Drawing::Point(545, 341);
-			this->textBox1->Multiline = true;
-			this->textBox1->Name = L"textBox1";
-			this->textBox1->ReadOnly = true;
-			this->textBox1->Size = System::Drawing::Size(348, 77);
-			this->textBox1->TabIndex = 1;
+			this->tb_Formatted->Location = System::Drawing::Point(545, 341);
+			this->tb_Formatted->Multiline = true;
+			this->tb_Formatted->Name = L"tb_Formatted";
+			this->tb_Formatted->ReadOnly = true;
+			this->tb_Formatted->Size = System::Drawing::Size(348, 77);
+			this->tb_Formatted->TabIndex = 1;
 			// 
-			// textBox2
+			// tb_Encrypted
 			// 
-			this->textBox2->Location = System::Drawing::Point(545, 429);
-			this->textBox2->Multiline = true;
-			this->textBox2->Name = L"textBox2";
-			this->textBox2->ReadOnly = true;
-			this->textBox2->Size = System::Drawing::Size(348, 77);
-			this->textBox2->TabIndex = 1;
+			this->tb_Encrypted->Location = System::Drawing::Point(545, 429);
+			this->tb_Encrypted->Multiline = true;
+			this->tb_Encrypted->Name = L"tb_Encrypted";
+			this->tb_Encrypted->ReadOnly = true;
+			this->tb_Encrypted->Size = System::Drawing::Size(348, 77);
+			this->tb_Encrypted->TabIndex = 1;
 			// 
 			// label4
 			// 
@@ -344,12 +352,15 @@ namespace PlayFairAndRSATool {
 			// cb_5x5
 			// 
 			this->cb_5x5->AutoSize = true;
+			this->cb_5x5->Checked = true;
+			this->cb_5x5->CheckState = System::Windows::Forms::CheckState::Checked;
 			this->cb_5x5->Location = System::Drawing::Point(425, 28);
 			this->cb_5x5->Name = L"cb_5x5";
 			this->cb_5x5->Size = System::Drawing::Size(108, 24);
 			this->cb_5x5->TabIndex = 4;
 			this->cb_5x5->Text = L"5x5 matrix";
 			this->cb_5x5->UseVisualStyleBackColor = true;
+			this->cb_5x5->CheckedChanged += gcnew System::EventHandler(this, &PlayFairForm::cb_5x5_CheckedChanged);
 			// 
 			// cb_6x6
 			// 
@@ -360,6 +371,7 @@ namespace PlayFairAndRSATool {
 			this->cb_6x6->TabIndex = 4;
 			this->cb_6x6->Text = L"6x6 matrix";
 			this->cb_6x6->UseVisualStyleBackColor = true;
+			this->cb_6x6->CheckedChanged += gcnew System::EventHandler(this, &PlayFairForm::cb_6x6_CheckedChanged);
 			// 
 			// label6
 			// 
@@ -387,6 +399,7 @@ namespace PlayFairAndRSATool {
 			this->tb_Separator1->Name = L"tb_Separator1";
 			this->tb_Separator1->Size = System::Drawing::Size(51, 27);
 			this->tb_Separator1->TabIndex = 5;
+			this->tb_Separator1->Text = L"X";
 			// 
 			// tb_Separator2
 			// 
@@ -394,6 +407,7 @@ namespace PlayFairAndRSATool {
 			this->tb_Separator2->Name = L"tb_Separator2";
 			this->tb_Separator2->Size = System::Drawing::Size(51, 27);
 			this->tb_Separator2->TabIndex = 5;
+			this->tb_Separator2->Text = L"Y";
 			// 
 			// tableLayoutPanel1
 			// 
@@ -762,8 +776,8 @@ namespace PlayFairAndRSATool {
 			this->Controls->Add(this->btn_Encrypt);
 			this->Controls->Add(this->tb_Output);
 			this->Controls->Add(this->tb_Input);
-			this->Controls->Add(this->textBox2);
-			this->Controls->Add(this->textBox1);
+			this->Controls->Add(this->tb_Encrypted);
+			this->Controls->Add(this->tb_Formatted);
 			this->Controls->Add(this->tb_Key);
 			this->Controls->Add(this->label5);
 			this->Controls->Add(this->label4);
@@ -783,9 +797,228 @@ namespace PlayFairAndRSATool {
 			this->PerformLayout();
 
 		}
+#pragma endregion
+PlayfairCipher^ playfairCipher;
+int matrixSize;
 private: System::Void PlayFairForm_Load(System::Object^ sender, System::EventArgs^ e) {
-	PlayfairCipher^ playfairCipher = gcnew PlayfairCipher(5);
-	cliext::vector<cliext::vector<string>> temp = playfairCipher->getMatrix();
+	cb_5x5->Checked = true;
+	cb_6x6->Checked = false;
+	matrixSize = 5;
+	playfairCipher = gcnew PlayfairCipher(5);
+	DisplayMatrix5();
+}
+void DisplayMatrix5() {
+		   char** temp = new char*;
+		   temp = playfairCipher->getMatrix();
+		   btn_00->Text = String(static_cast<char>(temp[0][0]), 1).ToString();
+		   btn_01->Text = String(static_cast<char>(temp[0][1]), 1).ToString();
+		   btn_02->Text = String(static_cast<char>(temp[0][2]), 1).ToString();
+		   btn_03->Text = String(static_cast<char>(temp[0][3]), 1).ToString();
+		   btn_04->Text = String(static_cast<char>(temp[0][4]), 1).ToString();
+		   btn_05->Text = "";
+		   btn_10->Text = String(static_cast<char>(temp[1][0]), 1).ToString();
+		   btn_11->Text = String(static_cast<char>(temp[1][1]), 1).ToString();
+		   btn_12->Text = String(static_cast<char>(temp[1][2]), 1).ToString();
+		   btn_13->Text = String(static_cast<char>(temp[1][3]), 1).ToString();
+		   btn_14->Text = String(static_cast<char>(temp[1][4]), 1).ToString();
+		   btn_15->Text = "";
+		   btn_20->Text = String(static_cast<char>(temp[2][0]), 1).ToString();
+		   btn_21->Text = String(static_cast<char>(temp[2][1]), 1).ToString();
+		   btn_22->Text = String(static_cast<char>(temp[2][2]), 1).ToString();
+		   btn_23->Text = String(static_cast<char>(temp[2][3]), 1).ToString();
+		   btn_24->Text = String(static_cast<char>(temp[2][4]), 1).ToString();
+		   btn_25->Text = "";
+		   btn_30->Text = String(static_cast<char>(temp[3][0]), 1).ToString();
+		   btn_31->Text = String(static_cast<char>(temp[3][1]), 1).ToString();
+		   btn_32->Text = String(static_cast<char>(temp[3][2]), 1).ToString();
+		   btn_33->Text = String(static_cast<char>(temp[3][3]), 1).ToString();
+		   btn_34->Text = String(static_cast<char>(temp[3][4]), 1).ToString();
+		   btn_35->Text = "";
+		   btn_40->Text = String(static_cast<char>(temp[4][0]), 1).ToString();
+		   btn_41->Text = String(static_cast<char>(temp[4][1]), 1).ToString();
+		   btn_42->Text = String(static_cast<char>(temp[4][2]), 1).ToString();
+		   btn_43->Text = String(static_cast<char>(temp[4][3]), 1).ToString();
+		   btn_44->Text = String(static_cast<char>(temp[4][4]), 1).ToString();
+		   btn_45->Text = "";
+		   btn_50->Text = "";
+		   btn_51->Text = "";
+		   btn_52->Text = "";
+		   btn_53->Text = "";
+		   btn_54->Text = "";
+		   btn_55->Text = "";
+	   }
+void DisplayMatrix6() {
+	char** temp = new char*;
+	temp = playfairCipher->getMatrix();
+	btn_00->Text = String(static_cast<char>(temp[0][0]), 1).ToString();
+	btn_01->Text = String(static_cast<char>(temp[0][1]), 1).ToString();
+	btn_02->Text = String(static_cast<char>(temp[0][2]), 1).ToString();
+	btn_03->Text = String(static_cast<char>(temp[0][3]), 1).ToString();
+	btn_04->Text = String(static_cast<char>(temp[0][4]), 1).ToString();
+	btn_05->Text = String(static_cast<char>(temp[0][5]), 1).ToString();
+	btn_10->Text = String(static_cast<char>(temp[1][0]), 1).ToString();
+	btn_11->Text = String(static_cast<char>(temp[1][1]), 1).ToString();
+	btn_12->Text = String(static_cast<char>(temp[1][2]), 1).ToString();
+	btn_13->Text = String(static_cast<char>(temp[1][3]), 1).ToString();
+	btn_14->Text = String(static_cast<char>(temp[1][4]), 1).ToString();
+	btn_15->Text = String(static_cast<char>(temp[1][5]), 1).ToString();
+	btn_20->Text = String(static_cast<char>(temp[2][0]), 1).ToString();
+	btn_21->Text = String(static_cast<char>(temp[2][1]), 1).ToString();
+	btn_22->Text = String(static_cast<char>(temp[2][2]), 1).ToString();
+	btn_23->Text = String(static_cast<char>(temp[2][3]), 1).ToString();
+	btn_24->Text = String(static_cast<char>(temp[2][4]), 1).ToString();
+	btn_25->Text = String(static_cast<char>(temp[2][5]), 1).ToString();
+	btn_30->Text = String(static_cast<char>(temp[3][0]), 1).ToString();
+	btn_31->Text = String(static_cast<char>(temp[3][1]), 1).ToString();
+	btn_32->Text = String(static_cast<char>(temp[3][2]), 1).ToString();
+	btn_33->Text = String(static_cast<char>(temp[3][3]), 1).ToString();
+	btn_34->Text = String(static_cast<char>(temp[3][4]), 1).ToString();
+	btn_35->Text = String(static_cast<char>(temp[3][5]), 1).ToString();
+	btn_40->Text = String(static_cast<char>(temp[4][0]), 1).ToString();
+	btn_41->Text = String(static_cast<char>(temp[4][1]), 1).ToString();
+	btn_42->Text = String(static_cast<char>(temp[4][2]), 1).ToString();
+	btn_43->Text = String(static_cast<char>(temp[4][3]), 1).ToString();
+	btn_44->Text = String(static_cast<char>(temp[4][4]), 1).ToString();
+	btn_45->Text = String(static_cast<char>(temp[4][5]), 1).ToString();
+	btn_50->Text = String(static_cast<char>(temp[5][0]), 1).ToString();
+	btn_51->Text = String(static_cast<char>(temp[5][1]), 1).ToString();
+	btn_52->Text = String(static_cast<char>(temp[5][2]), 1).ToString();
+	btn_53->Text = String(static_cast<char>(temp[5][3]), 1).ToString();
+	btn_54->Text = String(static_cast<char>(temp[5][4]), 1).ToString();
+	btn_55->Text = String(static_cast<char>(temp[5][5]), 1).ToString();
+}
+private: System::Void tb_Key_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	String^ temp = this->tb_Key->Text;
+	
+	//chuyen tu dang system ve chuan binh thuong (std::string)
+	char cStr[50] = { 0 };
+	if (temp->Length < sizeof(cStr))
+		sprintf(cStr, "%s", temp);
+	std::string stlString(cStr);
+
+	playfairCipher->createKeyMatrix(stlString);
+
+	if (matrixSize == 5) DisplayMatrix5();
+	else DisplayMatrix6();
+}
+private: System::Void btn_ClrKey_Click(System::Object^ sender, System::EventArgs^ e) {
+	tb_Key->Clear();
+}
+private: System::Void cb_5x5_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	if (cb_5x5->Checked) {
+		cb_6x6->Checked = false;
+		matrixSize = 5;
+		PlayfairCipher^ temp = gcnew PlayfairCipher(matrixSize);
+		playfairCipher = temp;
+		tb_Key_TextChanged(sender, e);
+	}
+	else {
+		cb_6x6->Checked = true;
+		cb_6x6_CheckedChanged(sender,e);
+	}
+}
+private: System::Void cb_6x6_CheckedChanged(System::Object^ sender, System::EventArgs^ e) {
+	if (cb_6x6->Checked) {
+		cb_5x5->Checked = false;
+		matrixSize = 6;
+		PlayfairCipher^ temp = gcnew PlayfairCipher(matrixSize);
+		playfairCipher = temp;
+		tb_Key_TextChanged(sender, e);
+	}
+	else {
+		cb_5x5->Checked = true;
+		cb_5x5_CheckedChanged(sender,e);
+	}
+}
+	   String^ DisplayFormattedText(string str) {
+		   string temp = "";
+		   for (int i = 0; i < str.length(); i+=2) {
+			   temp = temp+ str[i] + str[i + 1] + " ";
+		   }
+		   return String(temp.c_str()).ToString();
+	   }
+private: System::Void btn_Encrypt_Click(System::Object^ sender, System::EventArgs^ e) {
+	//kiem tra input
+	if (String::IsNullOrEmpty(tb_Input->Text)) {
+		MessageBox::Show("Please enter an input");
+		return;
+	}
+	//kiem tra separator 1 & 2
+	if (String::IsNullOrEmpty(tb_Separator1->Text) || String::IsNullOrEmpty(tb_Separator2->Text)
+		|| tb_Separator1->Text->ToUpper() == tb_Separator2->Text->ToUpper()) {
+		MessageBox::Show("Please check the separators");
+		return;
+	}
+	//formatting the input text
+	string formattedInput = formattingInput(tb_Input->Text,tb_Separator1->Text[0], tb_Separator2->Text[0]);
+	//hien thi formatted input
+	tb_Formatted->Text = DisplayFormattedText(formattedInput);
+	//ma hoa
+	string encryptedText = playfairCipher->Encrypt(formattedInput);
+	tb_Encrypted->Text = DisplayFormattedText(encryptedText);
+
+	//hien thi
+	tb_Output->Text = String(encryptedText.c_str()).ToString();
+}
+	string formattingInput(String^ str, char sep1,char sep2) {
+		str = str->ToUpper();
+		string temp = "", result = "";
+		sep1 = toupper(sep1);
+		sep2 = toupper(sep2);
+		if (matrixSize == 5) {
+			//Loai bo ki tu khong hop le
+			for (int i = 0; i < str->Length; i++) {
+				if (str[i] <= 'Z' && str[i] >= 'A') {
+					temp += str[i];
+				}
+			}
+		}
+		else {
+			//Loai bo ki tu khong hop le
+			for (int i = 0; i < str->Length; i++) {
+				if ((str[i] <= 'Z' && str[i] >= 'A') || (str[i] <= '9' && str[i] >= '0')) {
+					temp += str[i];
+				}
+			}
+		}
+		for (int i = 0; i < temp.length(); i++) {
+			result += temp[i];
+			//Tach cac ki tu trung nhau : aa -> ax ax; xx -> xy xy
+			if (i + 1 < temp.length() && (temp[i + 1] == temp[i]|| (temp[i + 1] == 'I' && temp[i]=='J') || (temp[i + 1] == 'J' && temp[i] == 'I')) && result.length() % 2) {
+				if (temp[i] != sep1) result += sep1;
+				else result += sep2;
+			}
+		}
+		//kiem tra phan tu cuoi cung co bi le hay khong
+		if (result.length() % 2) {
+			if (result.back() == sep1) result += sep2;
+			else result += sep1;
+		}
+		return result;
+	}
+private: System::Void btn_ClrInput_Click(System::Object^ sender, System::EventArgs^ e) {
+	tb_Input->Clear();
+}
+private: System::Void btn_Decrypt_Click(System::Object^ sender, System::EventArgs^ e) {
+	//kiem tra input
+	if (String::IsNullOrEmpty(tb_Input->Text)) {
+		MessageBox::Show("Please enter an input");
+		return;
+	}
+	//kiem tra separator 1 & 2
+	if (String::IsNullOrEmpty(tb_Separator1->Text) || String::IsNullOrEmpty(tb_Separator2->Text)
+		|| tb_Separator1->Text->ToUpper() == tb_Separator2->Text->ToUpper()) {
+		MessageBox::Show("Please check the separators");
+		return;
+	}
+	//formatting the input text
+	string formattedInput = formattingInput(tb_Input->Text, tb_Separator1->Text[0], tb_Separator2->Text[0]);
+	//giai ma
+	string decryptedText = playfairCipher->Decrypt(formattedInput);
+	tb_Formatted->Text = DisplayFormattedText(decryptedText);
+	tb_Encrypted->Text = DisplayFormattedText(formattedInput);
+	//hien thi
+	tb_Output->Text = String(decryptedText.c_str()).ToString();
 }
 };
 }

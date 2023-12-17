@@ -1,7 +1,15 @@
 D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.vcxproj.AssemblyReference.cache
-D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.vcxproj.GenerateResource.cache
 D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.MainForm.resources
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.RSAForm.resources
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.vcxproj.GenerateResource.cache
+=======
 D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.vcxproj.AssemblyReference.cache
 D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.MainForm.resources
 D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.PlayFairForm.resources
 D:\AnToanMang\DoAn\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.vcxproj.GenerateResource.cache
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.vcxproj.AssemblyReference.cache
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.MainForm.resources
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.PlayFairForm.resources
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.vcxproj.GenerateResource.cache
+D:\ProjVS\PlayFairAndRSATool\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.PlayFairForm.resources
+D:\UIT-N3\ATM\DACK\PlayFairAndRSATool\PlayFairAndRSATool\x64\Debug\PlayFairAndRSATool.RSAForm.resources
