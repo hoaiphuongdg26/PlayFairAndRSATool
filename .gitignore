@@ -130,3 +130,7 @@ $RECYCLE.BIN/
 *.tlog
 /PlayFairAndRSATool/x64/Debug
 /x64/Debug
+/PlayFairAndRSATool/x64/Release
+/x64/Debug/PlayFairAndRSATool.exe
+/x64/Release
+/x64/Debug/PlayFairAndRSATool.exe

@@ -362,7 +362,7 @@ vector<BIGNUM*> ConvertToVector(const string input) {
     }
     else {
         BN_free(lastNumber);
-        return {};
+        //return {};
     }
     return result;
 }
