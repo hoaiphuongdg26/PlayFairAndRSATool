@@ -754,19 +754,30 @@ private: System::Void btn_Save_Click(System::Object^ sender, System::EventArgs^ 
 }
 private: System::Void btn_Encrypt_Click(System::Object^ sender, System::EventArgs^ e) {
 	string input = msclr::interop::marshal_as<std::string>(tb_Input->Text);
-	tb_Output->Text = EncryptStringOrNumber(input, ConvertStringToBIGNUM(tb_e->Text), ConvertStringToBIGNUM(tb_N->Text));
+	if (EncryptStringOrNumber(input, ConvertStringToBIGNUM(tb_e->Text), ConvertStringToBIGNUM(tb_N->Text))) {
+		tb_Output->Text = EncryptStringOrNumber(input, ConvertStringToBIGNUM(tb_e->Text), ConvertStringToBIGNUM(tb_N->Text));
+	}
+	else MessageBox::Show("Please enter valid input!");
 }
 bool IsValidInputStringForDecrypt(String^ input) {
+	char cStr[50] = { 0 };
+	if (input->Length < sizeof(cStr))
+		sprintf(cStr, "%s", input);
+	std::string inputStr(cStr);
 	// Chuyển đổi System::String^ thành std::string
-	string inputStr = msclr::interop::marshal_as<string>(input);
+	//string inputStr = msclr::interop::marshal_as<string>(input);
 
 	// Sử dụng regex để kiểm tra chuỗi
 	regex pattern("^[0-9# ]+$");
-	return regex_match(inputStr, pattern);
+	return true;//regex_match(inputStr, pattern);
 }
 private: System::Void btn_Decrypt_Click(System::Object^ sender, System::EventArgs^ e) {
 	if (IsValidInputStringForDecrypt(tb_Input->Text)) {
-		string input = msclr::interop::marshal_as<std::string>(tb_Input->Text);
+		//string input = msclr::interop::marshal_as<std::string>(tb_Input->Text);
+		char cStr[50] = { 0 };
+		if (tb_Input->Text->Length < sizeof(cStr))
+			sprintf(cStr, "%s", tb_Input->Text);
+		std::string input(cStr);
 		tb_Output->Text = Decrypt(input, ConvertStringToBIGNUM(tb_d->Text), ConvertStringToBIGNUM(tb_N->Text));
 	}
 	else MessageBox::Show("Invalid Input String For Decrypt");
@@ -775,7 +786,7 @@ private: System::Void tb_e_TextChanged(System::Object^ sender, System::EventArgs
 	tb_Output->Text = "";
 }
 private: System::Void tb_Input_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	tb_Output->Text = "";
+	tb_Output->Clear();
 }
 private: System::Void tb_p_KeyPress(System::Object^ sender, System::Windows::Forms::KeyPressEventArgs^ e) {
 	if (e->KeyChar == (char)Keys::Enter) {

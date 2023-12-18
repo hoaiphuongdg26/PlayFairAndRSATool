@@ -254,7 +254,7 @@ System::String^ EncryptStringOrNumber(const string input, const BIGNUM* e, const
     // Kiểm tra xem input có phải là chuỗi text hay là số
     bool isNumber = true;
     for (char c : input) {
-        if (!isdigit(c)) {
+        if (c < '0' || c > '9') {
             isNumber = false;
             break;
         }
