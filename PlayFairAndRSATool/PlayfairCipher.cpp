@@ -107,6 +107,7 @@ char** PlayfairCipher::getMatrix() {
 Point* PlayfairCipher::getPointOfLetter(char letter) {
 	for (int i = 0; i < matrixSize; i++) {
 		for (int j = 0; j < matrixSize; j++) {
+			//Tra ve toa do
 			if (playfairMatrix[i][j] == letter) {
 				return new Point(i, j);
 			}
@@ -138,14 +139,17 @@ string PlayfairCipher::Encrypt(string input)
 	return input;
 }
 void PlayfairCipher::encryptCoordinates(Point *a, Point* b) {
+	//cung cot
 	if (a->column == b->column) {
 		a->row = (a->row + 1) % matrixSize;
 		b->row = (b->row + 1) % matrixSize;
 	}
+	//cung hang
 	else if (a->row == b->row) {
 		a->column = (a->column + 1) % matrixSize;
 		b->column = (b->column + 1) % matrixSize;
 	}
+	//khac hang, khac cot
 	else {
 		int temp = a->column;
 		a->column = b->column;
@@ -156,6 +160,7 @@ string PlayfairCipher::Decrypt(string cipherText)
 {
 	if (matrixSize == 5) {
 		for (unsigned int i = 0; i < cipherText.length(); i++)
+			//chuyen ki tu j thanh i
 			if (cipherText[i] == 'J') cipherText[i] = 'I';
 	}
 	Point* a = new Point();

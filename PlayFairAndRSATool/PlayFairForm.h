@@ -245,6 +245,7 @@ private: System::Windows::Forms::Label^ lb_title;
 			this->tb_Key->Size = System::Drawing::Size(257, 77);
 			this->tb_Key->TabIndex = 1;
 			this->tb_Key->TextChanged += gcnew System::EventHandler(this, &PlayFairForm::tb_Key_TextChanged);
+			this->tb_Key->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &PlayFairForm::tb_Key_KeyDown);
 			// 
 			// tb_Input
 			// 
@@ -253,6 +254,7 @@ private: System::Windows::Forms::Label^ lb_title;
 			this->tb_Input->Name = L"tb_Input";
 			this->tb_Input->Size = System::Drawing::Size(257, 122);
 			this->tb_Input->TabIndex = 1;
+			this->tb_Input->TextChanged += gcnew System::EventHandler(this, &PlayFairForm::tb_Input_TextChanged);
 			// 
 			// label3
 			// 
@@ -408,6 +410,8 @@ private: System::Windows::Forms::Label^ lb_title;
 			this->tb_Separator1->Size = System::Drawing::Size(51, 27);
 			this->tb_Separator1->TabIndex = 5;
 			this->tb_Separator1->Text = L"X";
+			this->tb_Separator1->TextChanged += gcnew System::EventHandler(this, &PlayFairForm::tb_Separator1_TextChanged);
+			this->tb_Separator1->KeyDown += gcnew System::Windows::Forms::KeyEventHandler(this, &PlayFairForm::tb_Separator1_KeyDown);
 			// 
 			// tb_Separator2
 			// 
@@ -416,6 +420,7 @@ private: System::Windows::Forms::Label^ lb_title;
 			this->tb_Separator2->Size = System::Drawing::Size(51, 27);
 			this->tb_Separator2->TabIndex = 5;
 			this->tb_Separator2->Text = L"Y";
+			this->tb_Separator2->TextChanged += gcnew System::EventHandler(this, &PlayFairForm::tb_Separator2_TextChanged);
 			// 
 			// tableLayoutPanel1
 			// 
@@ -812,6 +817,7 @@ private: System::Windows::Forms::Label^ lb_title;
 			this->Name = L"PlayFairForm";
 			this->Text = L"PlayFairForm";
 			this->Load += gcnew System::EventHandler(this, &PlayFairForm::PlayFairForm_Load);
+			this->Click += gcnew System::EventHandler(this, &PlayFairForm::PlayFairForm_Click);
 			this->tableLayoutPanel1->ResumeLayout(false);
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -908,6 +914,9 @@ void DisplayMatrix6() {
 	btn_55->Text = String(static_cast<char>(temp[5][5]), 1).ToString();
 }
 private: System::Void tb_Key_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	tb_Formatted->Clear();
+	tb_Encrypted->Clear();
+	tb_Output->Clear();
 	String^ temp = this->tb_Key->Text;
 	
 	//chuyen tu dang system ve chuan binh thuong (std::string)
@@ -1023,6 +1032,9 @@ private: System::Void btn_Encrypt_Click(System::Object^ sender, System::EventArg
 	}
 private: System::Void btn_ClrInput_Click(System::Object^ sender, System::EventArgs^ e) {
 	tb_Input->Clear();
+	tb_Formatted->Clear();
+	tb_Encrypted->Clear();
+	tb_Output->Clear();
 }
 private: System::Void btn_Decrypt_Click(System::Object^ sender, System::EventArgs^ e) {
 	//kiem tra input
@@ -1033,7 +1045,7 @@ private: System::Void btn_Decrypt_Click(System::Object^ sender, System::EventArg
 	//kiem tra separator 1 & 2
 	if (String::IsNullOrEmpty(tb_Separator1->Text) || String::IsNullOrEmpty(tb_Separator2->Text)
 		|| tb_Separator1->Text->ToUpper() == tb_Separator2->Text->ToUpper()) {
-		MessageBox::Show("Please check the separators");
+		MessageBox::Show("Please enter valid separators");
 		return;
 	}
 	//formatting the input text
@@ -1112,6 +1124,76 @@ private: System::Void tb_Formatted_Leave(System::Object^ sender, System::EventAr
 	lightButtonDown();
 }
 private: System::Void tb_Encrypted_Leave(System::Object^ sender, System::EventArgs^ e) {
+	lightButtonDown();
+}
+private: System::Void tb_Input_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	tb_Formatted->Clear();
+	tb_Encrypted->Clear();
+	tb_Output->Clear();
+}
+private: System::Void tb_Separator1_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	tb_Formatted->Clear();
+	tb_Encrypted->Clear();
+	tb_Output->Clear();
+	tb_Separator1->Text = tb_Separator1->Text->ToUpper();
+	if (matrixSize == 5) {
+		if (tb_Separator1->Text->Length > 1) {
+			MessageBox::Show("Please enter a valid separator");
+			tb_Separator1->Clear();
+		}
+		else
+		if (tb_Separator1->Text->Length == 1 && (tb_Separator1->Text[0] > 'Z' || tb_Separator1->Text[0] < 'A')) {
+			MessageBox::Show("Please enter a valid separator");
+			tb_Separator1->Clear();
+		}
+	}
+	else{
+		if (tb_Separator1->Text->Length > 1) {
+			MessageBox::Show("Please enter a valid separator");
+			tb_Separator1->Clear();
+		}
+		else
+		if (tb_Separator1->Text->Length == 1 && (tb_Separator1->Text[0] < '0' || tb_Separator1->Text[0] > 'Z' || (tb_Separator1->Text[0] > '9' && tb_Separator1->Text[0] < 'A'))) {
+			MessageBox::Show("Please enter a valid separator");
+			tb_Separator1->Clear();
+		}
+	}
+}
+private: System::Void tb_Separator2_TextChanged(System::Object^ sender, System::EventArgs^ e) {
+	tb_Formatted->Clear();
+	tb_Encrypted->Clear();
+	tb_Output->Clear();
+	tb_Separator2->Text = tb_Separator2->Text->ToUpper();
+	if (matrixSize == 5) {
+		if (tb_Separator2->Text->Length > 1) {
+			MessageBox::Show("Please enter a valid separator");
+			tb_Separator2->Clear();
+		}
+		else
+			if (tb_Separator2->Text->Length == 1 && (tb_Separator2->Text[0] > 'Z' || tb_Separator2->Text[0] < 'A')) {
+				MessageBox::Show("Please enter a valid separator");
+				tb_Separator2->Clear();
+			}
+	}
+	else {
+		if (tb_Separator2->Text->Length > 1) {
+			MessageBox::Show("Please enter a valid separator");
+			tb_Separator2->Clear();
+		}
+		else
+			if (tb_Separator2->Text->Length == 1 && (tb_Separator2->Text[0] < '0' || tb_Separator2->Text[0] > 'Z' || (tb_Separator2->Text[0] > '9' && tb_Separator2->Text[0] < 'A'))) {
+				MessageBox::Show("Please enter a valid separator");
+				tb_Separator2->Clear();
+			}
+	}
+}
+private: System::Void tb_Key_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+	if (e->KeyCode == Keys::Enter) tb_Input->Focus();
+}
+private: System::Void tb_Separator1_KeyDown(System::Object^ sender, System::Windows::Forms::KeyEventArgs^ e) {
+	if (e->KeyCode == Keys::Enter) tb_Separator2->Focus();
+}
+private: System::Void PlayFairForm_Click(System::Object^ sender, System::EventArgs^ e) {
 	lightButtonDown();
 }
 };
