@@ -917,13 +917,11 @@ private: System::Void tb_Key_TextChanged(System::Object^ sender, System::EventAr
 	tb_Formatted->Clear();
 	tb_Encrypted->Clear();
 	tb_Output->Clear();
-	String^ temp = this->tb_Key->Text;
-	
+	String^ temp = this->tb_Key->Text;	
 	//chuyen tu dang system ve chuan binh thuong (std::string)
-	char cStr[50] = { 0 };
-	if (temp->Length < sizeof(cStr))
-		sprintf(cStr, "%s", temp);
-	std::string stlString(cStr);
+	std::string stlString = "";
+	for (int i = 0; i < temp->Length; i++) {stlString += temp[i];}
+	// (cStr);
 
 	playfairCipher->createKeyMatrix(stlString);
 

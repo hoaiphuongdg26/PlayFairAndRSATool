@@ -241,9 +241,9 @@ vector<string> splitStringIntoBlocks(string input, int blockLength) {
 // Hàm tính độ dài mỗi khối dựa trên N
 int calculateBlockLength(const BIGNUM* N) {
     // Tính độ dài bit của N
-    int bitLength = BN_num_bytes(N);
+    int byteLength = BN_num_bytes(N);
 
-    return bitLength - 1;
+    return byteLength - 1;
 }
 
 // Hàm mã hoá

@@ -475,6 +475,7 @@ namespace MainForm {
 			this->tb_bits->Size = System::Drawing::Size(195, 22);
 			this->tb_bits->TabIndex = 6;
 			this->tb_bits->KeyPress += gcnew System::Windows::Forms::KeyPressEventHandler(this, &RSAForm::tb_bits_KeyPress);
+			this->tb_bits->Leave += gcnew System::EventHandler(this, &RSAForm::tb_bits_Leave);
 			// 
 			// label2
 			// 
@@ -537,6 +538,7 @@ private: System::Void tb_p_Leave(System::Object^ sender, System::EventArgs^ e) {
 		}
 		BN_free(number);
 	}
+	updateRSAParameters();
 }
 private: System::Void tb_q_Leave(System::Object^ sender, System::EventArgs^ e) {
 	if (tb_q->Text != "") {
@@ -555,6 +557,7 @@ private: System::Void tb_q_Leave(System::Object^ sender, System::EventArgs^ e) {
 		}
 		BN_free(number);
 	}
+	updateRSAParameters();
 }
 private: System::Void btn_generatePrimeNum_Click(System::Object^ sender, System::EventArgs^ e) {
 	int numBits;
@@ -584,12 +587,16 @@ private: System::Void btn_generatePrimeNum_Click(System::Object^ sender, System:
 	}
 }
 private: System::Void tb_p_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	updateRSAParameters();
-	tb_Output->Text = "";
+	if (System::String::IsNullOrEmpty(tb_p->Text)) {
+		updateRSAParameters();
+		tb_Output->Text = "";
+	}
 }
 private: System::Void tb_q_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	updateRSAParameters();
-	tb_Output->Text = "";
+	if (System::String::IsNullOrEmpty(tb_q->Text)) {
+		updateRSAParameters();
+		tb_Output->Text = "";
+	}
 }
 void updateRSAParameters() {
 	if (ConvertStringToBIGNUM(tb_p->Text) && ConvertStringToBIGNUM(tb_q->Text)) {
@@ -808,6 +815,15 @@ private: System::Void tb_bits_KeyPress(System::Object^ sender, System::Windows::
 		btn_generatePrimeNum_Click(sender, e);
 		tb_e->Focus();
 	}
+}
+private: System::Void tb_bits_Leave(System::Object^ sender, System::EventArgs^ e) {
+	int numBits;
+	if (Int32::TryParse(tb_bits->Text, numBits)) {
+		if (numBits < 3) {
+			MessageBox::Show("Number of bits must be bigger than 2");
+			tb_bits->Clear();
+		}
+	}	
 }
 };
 }
