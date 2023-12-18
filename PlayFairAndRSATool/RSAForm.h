@@ -530,6 +530,12 @@ private: System::Void tb_p_Leave(System::Object^ sender, System::EventArgs^ e) {
 				tb_p->Text = "";
 				tb_p->Focus();
 			}
+			else if (BN_cmp(ConvertStringToBIGNUM(tb_q->Text), number) == 0) {
+				// Kiểm tra xem q có bằng p hay không
+				MessageBox::Show("Invalid input. q must be different from p.");
+				tb_p->Text = "";
+				tb_p->Focus();
+			}
 		}
 		else {
 			MessageBox::Show("Invalid input. Please enter a valid integer p.");
@@ -549,6 +555,12 @@ private: System::Void tb_q_Leave(System::Object^ sender, System::EventArgs^ e) {
 				tb_q->Text = "";
 				tb_q->Focus();
 			}
+			else if (BN_cmp(ConvertStringToBIGNUM(tb_p->Text), number) == 0) {
+				// Kiểm tra xem q có bằng p hay không
+				MessageBox::Show("Invalid input. q must be different from p.");
+				tb_q->Text = "";
+				tb_q->Focus();
+			}
 		}
 		else {
 			MessageBox::Show("Invalid input. Please enter a valid integer q.");
@@ -563,21 +575,28 @@ private: System::Void btn_generatePrimeNum_Click(System::Object^ sender, System:
 	int numBits;
 	if (Int32::TryParse(tb_bits->Text, numBits))
 	{
-		BIGNUM* prime_p = createRandomPrime(numBits);
-		BIGNUM* prime_q = createRandomPrime(numBits);
-
-		if (prime_p && prime_q)
-		{
-			tb_p->Text = ConvertBIGNUMToString(prime_p);
-			tb_q->Text = ConvertBIGNUMToString(prime_q);
-
-			BN_free(prime_p);
-			BN_free(prime_q);
+		if (numBits < 2) {
+			MessageBox::Show("Number of bits must be bigger than 1");
+			tb_bits->Clear();
+			tb_bits->Focus();
 		}
-		else
-		{
-			// Xử lý lỗi khi sinh số nguyên tố không thành công
-			MessageBox::Show("Error generating random primes.");
+		else {
+			BIGNUM* prime_p = createRandomPrime(numBits);
+			BIGNUM* prime_q = createRandomPrime(numBits);
+
+			if (prime_p && prime_q)
+			{
+				tb_p->Text = ConvertBIGNUMToString(prime_p);
+				tb_q->Text = ConvertBIGNUMToString(prime_q);
+
+				BN_free(prime_p);
+				BN_free(prime_q);
+			}
+			else
+			{
+				// Xử lý lỗi khi sinh số nguyên tố không thành công
+				MessageBox::Show("Error generating random primes.");
+			}
 		}
 	}
 	else
@@ -587,15 +606,15 @@ private: System::Void btn_generatePrimeNum_Click(System::Object^ sender, System:
 	}
 }
 private: System::Void tb_p_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	if (System::String::IsNullOrEmpty(tb_p->Text)) {
+	tb_Output->Text = "";
+	if (tb_q->Text != "" && tb_p->Text != "") {
 		updateRSAParameters();
-		tb_Output->Text = "";
 	}
 }
 private: System::Void tb_q_TextChanged(System::Object^ sender, System::EventArgs^ e) {
-	if (System::String::IsNullOrEmpty(tb_q->Text)) {
+	tb_Output->Text = "";
+	if (tb_q->Text != "" && tb_p->Text != "") {
 		updateRSAParameters();
-		tb_Output->Text = "";
 	}
 }
 void updateRSAParameters() {
@@ -657,7 +676,7 @@ void updateRSAParameters() {
 	}
 }
 private: System::Void tb_e_Leave(System::Object^ sender, System::EventArgs^ e) {
-	if (tb_q->Text == "" || tb_p->Text == "") {
+	if (tb_e->Text!="" && (tb_q->Text == "" || tb_p->Text == "")) {
 		MessageBox::Show("Please enter number p and q before.");
 		tb_e->Text = "";
 	}
@@ -690,15 +709,10 @@ private: System::Void tb_e_Leave(System::Object^ sender, System::EventArgs^ e) {
 	}
 }
 private: System::Void btn_updateParameters_Click(System::Object^ sender, System::EventArgs^ e) {
-	// Tính public key e
-	BIGNUM* num_e = createRandomPrime_e(ConvertStringToBIGNUM(tb_phiN->Text));
-	tb_e->Text = ConvertBIGNUMToString(num_e);
-	BN_free(num_e);
-	// Tính private key d
-	BIGNUM* num_d = calculateD(ConvertStringToBIGNUM(tb_e->Text), ConvertStringToBIGNUM(tb_phiN->Text));
-	tb_d->Text = ConvertBIGNUMToString(num_d);
-	BN_free(num_d);
-
+	if (System::String::IsNullOrEmpty(tb_p->Text) || System::String::IsNullOrEmpty(tb_q->Text)) {
+		MessageBox::Show("Please enter number p and q before.");
+	}
+	else updateRSAParameters();
 }
 private: System::Void btn_file_Click(System::Object^ sender, System::EventArgs^ e) {
 	// Mở hộp thoại chọn file
@@ -817,13 +831,7 @@ private: System::Void tb_bits_KeyPress(System::Object^ sender, System::Windows::
 	}
 }
 private: System::Void tb_bits_Leave(System::Object^ sender, System::EventArgs^ e) {
-	int numBits;
-	if (Int32::TryParse(tb_bits->Text, numBits)) {
-		if (numBits < 3) {
-			MessageBox::Show("Number of bits must be bigger than 2");
-			tb_bits->Clear();
-		}
-	}	
+	
 }
 };
 }

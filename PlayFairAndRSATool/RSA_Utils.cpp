@@ -41,7 +41,6 @@ BIGNUM* ConvertStringToBIGNUM(System::String^ input) {
         BN_free(number);
         return nullptr;
     }
-
     return number;
 }
 
@@ -104,13 +103,6 @@ BIGNUM* createRandomPrime(int numBits) {
 
     // Kiểm tra giá trị trả về từ BN_generate_prime
     if (!BN_generate_prime(randomNum, numBits, NULL, NULL, NULL, NULL, NULL)) {
-        // Xử lý lỗi và giải phóng bộ nhớ
-        BN_free(randomNum);
-        return nullptr;
-    }
-
-    // Kiểm tra xem số tạo ra có phải là số nguyên tố không
-    if (!BN_is_prime(randomNum, NULL, NULL, NULL, NULL)) {
         // Xử lý lỗi và giải phóng bộ nhớ
         BN_free(randomNum);
         return nullptr;
